@@ -1,0 +1,6 @@
+
+- name: interface_networking_restart
+  service:
+      name: systemd-networkd
+      state: restarted
+

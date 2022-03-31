@@ -1,0 +1,5 @@
+---
+device_aliases:
+  10.10.10.10: attacker
+  10.10.10.20: server
+...

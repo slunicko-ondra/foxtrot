@@ -1,0 +1,49 @@
+# A topology definition for PV276 project sandboxes
+name: pv276-2022
+
+hosts:
+  - name: attacker
+    base_box:
+      image: kali
+      mgmt_user: debian
+    flavor: csirtmu.tiny1x2
+
+  - name: server
+    base_box:
+      image: ubuntu-18.04
+      mgmt_user: ubuntu
+    flavor: csirtmu.tiny1x2
+
+routers:
+  - name: router
+    base_box:
+      image: debian-10-x86_64
+      mgmt_user: debian
+    flavor: csirtmu.tiny1x2
+
+wan:
+  name: internet-connection
+  cidr: 100.100.100.0/24
+
+networks:
+  - name: network
+    cidr: 10.10.10.0/24
+
+net_mappings:
+  - host: server
+    network: network
+    ip: 10.10.10.20
+
+  - host: attacker
+    network: network
+    ip: 10.10.10.10
+
+router_mappings:
+  - router: router
+    network: network
+    ip: 10.10.10.1
+
+groups:
+  - name: user-accessible
+    nodes:
+      - attacker
