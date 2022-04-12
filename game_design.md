@@ -1,13 +1,183 @@
-This is a template for your cybersecurity game designs.
-Whenever you see something in [brackets], replace it with your content.
+# StopThePropaganda
 
-# [Title of your game]
+You are a member of a technically proficient group of people fighting the disinformation scene. You gathered information from your secret source about disinformation web magazine ‘Hladné Správy’. From the information, you found out that this magazine has obtained documents containing a load of false information and one unnamed country's leadership provided these documents. On top of that, this country reportedly paid the magazine to release the information all over the internet as true articles and that is why we need to stop them and hand the documents to authorities. 
+We found out the exact location of the magazine's offices and your task is to go there and get access to those incriminating documents in their network. Go there when the offices are empty and try not to get exposed. The best way would be to get to the chief editor's computer, but he takes it home with him. However, his secretary probably doesn't. Start there and good luck. 
 
-[A short introduction (several sentences) to the story of your game goes here.]
 
-[Below is a template for individual levels. Copy it as many times as you need.]
+## Level 1: Get access 
 
-## Level [number]: [Title of the level]
+**Objective** (*visible only to the designer, never to the player*):
+
+The player should get access to secretary computer using SSH.
+
+---
+---
+
+**Task assignment** (*visible to the player*):
+
+As you probably know, most of the attacks start with gathering some information about the victim and does not have to happen online. If you have access to the victim’s trash cans or their table where they sit, there may be some valuable pieces of information. 
+
+When this is not possible, social media or blogging websites are also options where you can find hobbies or other compromising info on the victim. But I have a feeling you do not need this type of information.
+
+When you came to the offices, the building was locked and the only possible entrance you found was the window right next to the cheif editors secretary table. You cannot physically access her computer but it looks like it is turned on. Once you gather some information, you can start with getting the remote access to the computer of the secretary. Maybe access through the terminal will be efficient, but you will definitely need login and password. 
+ 
+**Hints** (*visible to the player if requested*):
+
+Example: Hint 1 (What tool to use?): Use the command-line  **ssh**. Type `ssh --help` for more info.
+Example: Hint 2 (What login to use?): Use the first and last name of the secretary and change it to lowercase and join them using `.`
+
+**Solution** (*visible to the player if requested*):
+
+**Flag value** (*visible to the player if they solve the level*):
+
+What should the player discover after successfully solving the level:
+
+`secretary_username` and `secretary_password`
+
+---
+---
+
+**Estimated duration** (*visible only to the designer, never to the player*):
+
+[Number] minutes (for the average player to complete the level)
+
+**Learning outcomes** (*visible only to the designer, never to the player*):
+
+That reconnaissance is important part of hacking and you don't have to use computer to discover useful information. And also basic bash command knowledge.
+
+## Level 2: Find that file
+
+**Objective** (*visible only to the designer, never to the player*):
+
+Find the secret file in the file system. It's text file in Trash folder.
+
+---
+---
+
+**Task assignment** (*visible to the player*):
+
+Valeria received an email with instructions in the attachment. When you received secret instructions, you should probably delete them, right? However, is deleted file lost forever?
+
+**Hints** (*visible to the player if requested*):
+
+Hint 1 (Where to look): Deleted files are moved to Trash folder. It's located at /home/Valeria/.local/share/Trash.
+
+Hint 2 (Which file?): Filename is instructions.txt (#TODO)
+
+**Solution** (*visible to the player if requested*):
+
+***#TODO***
+```
+cd /home/Valeria/.local/share/Trash
+ls
+cat instructions.txt
+```
+
+**Flag value** (*visible to the player if they solve the level*):
+
+What should the player discover after successfully solving the level:
+
+`filemane of secret file stored on server` (#TODO)
+
+---
+---
+
+**Estimated duration** (*visible only to the designer, never to the player*):
+
+(#TODO)
+[Number] minutes (for the average player to complete the level)
+
+**Learning outcomes** (*visible only to the designer, never to the player*):
+
+Searching for files via linux terminal. Find out the path of Trash folder.
+
+## Level 3: Scan the network
+
+**Objective**:
+
+The task is to find the machine with a running web server. Use nmap and find a running web server.
+
+---
+---
+
+**Task assignment**:
+You already got into the computer of Ms. Valeria and found some useful information about files stored on some server. 
+
+Your task is to find the machine with a running web server. Use some scanning tool and look for specific services running on specific ports.
+
+As a flag, submit the name and version of service running on the web server.
+
+**Hints**:
+Hint 1 (What to look for?): Web servers usually run on port 80, try looking for that.
+Hint 2 (What tool to use?): Use the command-line tool **nmap**.
+
+**Solution**:
+***#TODO***
+```
+root@attacker:~#  nmap
+Look for port 80 in the output
+    ---
+    tcp/80
+    tcp/22
+The flag is 25790
+```
+
+**Flag value**
+`Apache 2.4.50`
+
+---
+---
+
+**Estimated duration** (*visible only to the designer, never to the player*):
+
+10 minutes
+
+**Learning outcomes** 
+The player learns how to scan the network to discover its structure and various running services.
+
+
+## Level 4: Exploit the server
+
+**Objective** (*visible only to the designer, never to the player*):
+
+Use the exploit to get access to the servers filesystem and find the file with the name from task2. 
+
+---
+---
+
+**Task assignment** (*visible to the player*):
+
+You found the IP address of the computer where Apache server is running. I think I read somewhere about some Apache server vulnerabilities. I think its name was [CVE-2021-42013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42013). To exploit this vulnerability you will need a script. You have one prepared in Downloads folder. Then you need to find the file that name you discovered from the deleted file in Valerias computer.
+
+**Hints** (*visible to the player if requested*):
+
+***#TODO***
+
+**Solution** (*visible to the player if requested*):
+
+***#TODO***
+
+
+**Flag value** (*visible to the player if they solve the level*):
+
+`Some kind of information from secret file.`
+
+---
+---
+
+**Estimated duration** (*visible only to the designer, never to the player*):
+
+[Number] minutes (for the average player to complete the level)
+
+**Learning outcomes** (*visible only to the designer, never to the player*):
+Learn about vulnerabilities (CVE) and that you can exploit them easily.
+
+---
+---
+
+# Level template
+
+## Level X: [Title of the level]
 
 **Objective** (*visible only to the designer, never to the player*):
 
@@ -65,7 +235,7 @@ The flag is 25790
 
 What should the player discover after successfully solving the level:
 
-[A String with the resulting flag]
+[Sdilejte az to smazou!]
 
 Example: CVE-2019-15107
 
@@ -78,11 +248,7 @@ Example: CVE-2019-15107
 
 **Learning outcomes** (*visible only to the designer, never to the player*):
 
-What technical skills will the player achieve by solving the level?
-
-
-
-
 ## License
-
+***#TODO***
 This work by [your names] is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0).
+
