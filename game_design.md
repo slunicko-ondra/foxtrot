@@ -23,8 +23,9 @@ When you came to the offices, the building was locked and the only possible entr
  
 **Hints** (*visible to the player if requested*):
 
-Example: Hint 1 (What tool to use?): Use the command-line  **ssh**. Type `ssh --help` for more info.
-Example: Hint 2 (What login to use?): Use the first and last name of the secretary and change it to lowercase and join them using `.`
+Hint 1 (What tool to use?): Use the command-line  **ssh**. Type `ssh --help` for more info.
+
+Hint 2 (What login to use?): Use the first and last name of the secretary and change it to lowercase and join them using `.`
 
 **Solution** (*visible to the player if requested*):
 
@@ -108,7 +109,9 @@ Your task is to find the machine with a running web server. Use some scanning to
 As a flag, submit the name and version of service running on the web server.
 
 **Hints**:
+
 Hint 1 (What to look for?): Web servers usually run on port 80, try looking for that.
+
 Hint 2 (What tool to use?): Use the command-line tool **nmap**.
 
 **Solution**:
