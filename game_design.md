@@ -119,7 +119,7 @@ Hint 3 (What else?): Try to find a right option to run nmap with, that enables d
 **Solution**:
 ***#TODO***
 ```
-root@attacker:~#  nmap -A
+root@attacker:~#  nmap -sV
 Look for port 80 in the output
     ---
     tcp/80
