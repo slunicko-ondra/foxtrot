@@ -114,7 +114,7 @@ Hint 1 (What to look for?): Web servers usually run on port 80, try looking for 
 
 Hint 2 (What tool to use?): Use the command-line tool **nmap**.
 
-Hint 3 (What else?): Try to find a right option to run nmap with, that enables version detection.
+Hint 3 (What else?): Try to find a right option to run nmap with, that enables detection of services versions.
 
 **Solution**:
 ***#TODO***
@@ -124,7 +124,7 @@ Look for port 80 in the output
     ---
     tcp/80
     tcp/22
-The flag is 25790
+
 ```
 
 **Flag value**
