@@ -20,6 +20,18 @@ hosts:
       mgmt_user: ubuntu
     flavor: csirtmu.tiny1x2
 
+  - name: server2
+    base_box:
+      image: ubuntu-18.04
+      mgmt_user: ubuntu
+    flavor: csirtmu.tiny1x2
+
+  - name: server3
+    base_box:
+      image: ubuntu-18.04
+      mgmt_user: ubuntu
+    flavor: csirtmu.tiny1x2
+
 routers:
   - name: router
     base_box:
