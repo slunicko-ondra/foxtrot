@@ -1,21 +1,4 @@
----
-# Main user ansible playbook.
-# Write your custom configuration here:
+# This is an empty template playbook
+# You can write your custom configuration here
 
-# Installation of common tools at all hosts
-- name: Configuring hosts
-  hosts: hosts
-  become: yes
-  roles:
-    - hosts
-
-# Installation and configuration of each host
-- name: Configuring devices separately
-  hosts: hosts
-  become: yes
-  tasks:
-  - name: include role
-    include_role:
-      name: "{{ inventory_hostname }}"
-
-...
+- hosts: all
