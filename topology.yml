@@ -60,6 +60,14 @@ net_mappings:
     network: network
     ip: 10.10.10.30
 
+  - host: server2
+    network: network
+    ip: 10.10.10.10
+
+  - host: server3
+    network: network
+    ip: 10.10.10.30
+
 router_mappings:
   - router: router
     network: network
