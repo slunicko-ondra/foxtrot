@@ -14,6 +14,12 @@ hosts:
       mgmt_user: ubuntu
     flavor: csirtmu.tiny1x2
 
+  - name: user
+    base_box:
+      image: ubuntu-18.04
+      mgmt_user: ubuntu
+    flavor: csirtmu.tiny1x2
+
 routers:
   - name: router
     base_box:
@@ -37,6 +43,10 @@ net_mappings:
   - host: attacker
     network: network
     ip: 10.10.10.10
+
+  - host: user
+    network: network
+    ip: 10.10.10.30
 
 router_mappings:
   - router: router
