@@ -45,33 +45,33 @@ wan:
 
 networks:
   - name: network
-    cidr: 10.10.10.0/24
+    cidr: 192.168.1.0/24
 
 net_mappings:
   - host: server
     network: network
-    ip: 10.10.10.20
+    ip: 192.168.1.4
 
   - host: attacker
     network: network
-    ip: 10.10.10.10
+    ip: 192.168.1.30
 
   - host: user
     network: network
-    ip: 10.10.10.30
+    ip: 192.168.1.19
 
   - host: server2
     network: network
-    ip: 10.10.10.40
+    ip: 192.168.1.6
 
   - host: server3
     network: network
-    ip: 10.10.10.50
+    ip: 192.168.1.3
 
 router_mappings:
   - router: router
     network: network
-    ip: 10.10.10.1
+    ip: 192.168.1.1
 
 groups:
   - name: user-accessible

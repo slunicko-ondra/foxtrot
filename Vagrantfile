@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.10",
+      ip: "85.248.228.137",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"
@@ -58,7 +58,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.20",
+      ip: "85.248.228.135",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"
@@ -86,7 +86,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.30",
+      ip: "85.248.228.132",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"
@@ -114,7 +114,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.40",
+      ip: "85.248.228.136",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"
@@ -142,7 +142,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.50",
+      ip: "85.248.228.139",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"
