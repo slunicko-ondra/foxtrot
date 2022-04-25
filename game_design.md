@@ -108,8 +108,13 @@ Your task is to find the machine with a running web server. Use some scanning to
 As a flag, submit the name and version of service running on the web server.
 
 **Hints**:
+
 Hint 1 (What to look for?): Web servers usually run on port 80, try looking for that.
+
 Hint 2 (What tool to use?): Use the command-line tool **nmap**.
+
+Hint 3 (What range to use?): Have you heard about CIDR Notation? It can save you some time if you use subnet mask /24.
+
 
 **Solution**:
 ***#TODO***
