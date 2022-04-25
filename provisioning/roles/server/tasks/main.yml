@@ -1,5 +1,52 @@
 ---
-# This is a role for the host server.
-# You can write your tasks here.
+# APACHE
+- name: install wget, curl, make, gcc and perl
+  apt:
+    pkg:
+      - wget
+      - curl
+      - make
+      - gcc
+      - perl
+    state: present
+    update_cache: true
 
+- name: install libraries
+  apt:
+    pkg:
+      - libapr1-dev
+      - libaprutil1-dev
+      - libpcre3-dev
+    state: present
+    update_cache: true
+
+- name: copy Apache archive
+  copy:
+    src: httpd-2.4.50.tar.gz
+    dest: /tmp/
+
+- name: unzip tar file
+  shell: cd /tmp/ && tar -xf httpd-2.4.50.tar.gz
+
+- name: install Apache
+  shell: cd /tmp/ && ./httpd-2.4.50/configure --prefix=/ && make && make install
+
+- name: copy config file
+  copy:
+    src: httpd.conf
+    dest: /conf/
+
+- name: copy start script
+  copy:
+    src: start.sh
+    dest: /tmp/
+    mode: 777
+
+- name: start Apache
+  shell: apachectl -k start
+  become: true
+
+- name: run start script
+  shell: cd /tmp/ && ./start.sh
+  become: true
 ...

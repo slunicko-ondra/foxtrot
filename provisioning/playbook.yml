@@ -1,4 +1,19 @@
-# This is an empty template playbook
-# You can write your custom configuration here
+---
+# Basic configuration of all defined devices
 
-- hosts: all
+# Installation of common tools at all hosts
+- name: Configuring hosts
+  hosts: hosts
+  become: true
+  roles:
+    - hosts
+
+# Installation and configuration of each host
+- name: Configuring devices separately
+  hosts: hosts
+  become: true
+  tasks:
+  - name: include role
+    include_role:
+      name: "{{ inventory_hostname }}"
+...
