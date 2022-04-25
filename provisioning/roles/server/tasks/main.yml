@@ -39,7 +39,13 @@
 - name: copy start script
   copy:
     src: start.sh
-    dest: /tmp/
+    dest: /start_apache/
+    mode: 777
+
+- name: copy start_apache script
+  copy:
+    src: start_apache.sh
+    dest: /start_apache/
     mode: 777
 
 - name: start Apache
@@ -47,9 +53,16 @@
   become: true
 
 - name: run start script
-  shell: cd /tmp/ && ./start.sh
+  shell: cd /start_apache/ && ./start.sh
   become: true
 
+- name: set Apache to run automatically after reboot
+  cron:
+    name: "run Apache"
+    special_time: reboot
+    job: "/start_apache/start.sh && /start_apache/start_apache.sh"
+
+# Secret file
 - name: copy secret file
   copy:
     src: secret
