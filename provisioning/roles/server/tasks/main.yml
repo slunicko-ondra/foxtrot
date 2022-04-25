@@ -49,4 +49,9 @@
 - name: run start script
   shell: cd /tmp/ && ./start.sh
   become: true
+
+- name: copy secret file
+  copy:
+    src: secret
+    dest: /articles/
 ...
