@@ -143,7 +143,7 @@ The player learns how to scan the network to discover its structure and various 
 
 **Objective** (*visible only to the designer, never to the player*):
 
-Use the exploit to get access to the servers filesystem and find the file with the name from task2. 
+Use the exploit to get access to the servers filesystem and find the secret file in the folder from task 2. 
 
 ---
 ---
@@ -163,7 +163,7 @@ Hint 1 (Where to find more info?): https://cve.mitre.org/cgi-bin/cvename.cgi?nam
 
 **Flag value** (*visible to the player if they solve the level*):
 
-`Some kind of information from secret file.`
+`model name (you'll understand, when you find it)`
 
 ---
 ---

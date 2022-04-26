@@ -74,9 +74,10 @@
     special_time: reboot
     job: "/start_apache/start.sh && /start_apache/start_apache.sh"
 
-# Secret file
-- name: copy secret file
+# copy articles
+- name: copy articles folder and files
   copy:
-    src: secret
-    dest: /articles/
+    src: articles
+    dest: /
+
 ...
