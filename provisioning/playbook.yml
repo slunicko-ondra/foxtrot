@@ -8,6 +8,12 @@
   roles:
     - hosts
 
+- name: Configuring valerias PC
+  hosts: user
+  become: true
+  roles:
+    - valeria
+
 # Installation and configuration of each host
 - name: Configuring devices separately
   hosts: hosts
