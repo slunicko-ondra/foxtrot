@@ -111,7 +111,7 @@ Hint 2 (What tool to use?): Use the command-line tool **nmap**.
 
 Hint 3 (What else?): Try to find a right option to run nmap with, that enables detection of services versions.
 
-Hint 4 (What range to use?): Have you heard about CIDR Notation? It can save you some time if you use subnet mask /24.
+Hint 4 (What range to use?): Have you heard about CIDR Notation? It can save you some time if you use subnet mask /24 as it does not scan all adreses.
 
 
 **Solution**:
