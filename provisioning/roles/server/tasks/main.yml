@@ -36,6 +36,18 @@
     src: httpd.conf
     dest: /conf/
 
+# Index.html data
+- name: Copy index.html data directory to the server
+  copy:
+    src: index_data
+    dest: /htdocs/
+
+# Hladne Spravy index.html page
+- name: Copy index.html
+  copy:
+    src: index.html
+    dest: /htdocs/
+
 - name: copy start script
   copy:
     src: start.sh

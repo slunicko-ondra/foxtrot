@@ -1,0 +1,1144 @@
+/*
+Theme Name: Hlavne Spravy v2
+Theme URI: http://hlavnespravy.sk
+Author: HSP
+Version: 66
+*/
+
+#fatchilli-adm-5125-left ~ #main-body {
+    max-width: calc(100% - 40px);
+}
+
+#protag-admbg-fixed ~ #top-nav {
+    margin-top: 210px;
+}
+
+#top-nav {
+    position: relative;
+    background: white;
+}
+
+body .main-content {
+    margin-top: 0px !important;
+    padding-top: 30px;
+    height: auto !important;
+    max-width: 1200px;
+    margin: auto;
+    background: white;
+    position: relative;
+}
+
+#bottom-nav {
+	background: white;
+	position: relative;
+}
+
+.login-register-popup {
+	position: fixed !important;
+    top: 60px !important;
+    z-index: 9999999 !important;
+}
+
+.login-register-popup .close-login-register-popup {
+    z-index: 2;
+}
+
+#login-overlay {
+	display: none;
+  	position: absolute;
+  	left: 0;
+  	right: 0;
+  	top: 0;
+  	bottom: 0;
+    background: #00000080;
+    z-index: 1;
+}
+
+#login-overlay .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.op-controls-time {
+    position: absolute;
+    top: -15px;
+	font-family: TitilliumWeb, serif !important;
+	color: #c5c6c6 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    width: 100%;
+    margin: 0 !important;
+    left: 0;
+}
+
+.op-controls__progress--played {
+	border-color: #2b2d59 !important;
+    color: #2b2d59 !important;
+}
+
+.op-controls__progress {
+    background: linear-gradient(to right, #fff 3px, #c5c6c6 3px, #c5c6c6 100%) !important;
+    margin-top: 7px !important;
+}
+
+.op-controls__current {
+    left: 31px;
+    position: absolute;
+}
+
+.op-controls__time-delimiter, .op-controls__playpause:before, .op-controls__tooltip {
+	display: none !important;
+}
+
+.op-controls__duration {
+    right: 0;
+    position: absolute;
+}
+
+.op-player__audio {
+    background: #fff !important;
+    margin-bottom: 20px;
+	margin-top: 5px !important;
+}
+
+.op-controls {
+	padding: 0 !important;
+    background: #fff !important;
+}
+
+.op-controls button:hover {
+    opacity: 1 !important;
+}
+
+.op-controls__playpause {
+	background: transparent url(https://web.archive.org/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/js/mediaelement/mejs-controls.svg) !important;
+    height: 20px;
+    width: 20px;
+    margin-top: 1px !important;
+}
+
+.op-controls__playpause.op-controls__playpause--pause {
+	background-position: -20px 0 !important;
+}
+
+.op-controls__progress--seek {
+	background: transparent !important;
+}
+
+.op-controls input[type=range] {
+    -webkit-appearance: none;
+    width: 100%;
+    background: transparent;
+}
+
+.op-controls input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+	display: none !important;
+    height: 20px !important;
+    width: 20px !important;
+	padding: 0 !important;
+    border-radius: 0px !important;
+	background: transparent url(https://web.archive.org/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/js/mediaelement/mejs-controls.svg) !important;
+	border: none !important;
+	margin: -5px 0 0 0px !important;
+}
+
+.op-controls input[type=range]::-moz-range-thumb {
+	opacity: 0 !important;
+    height: 20px !important;
+    width: 20px !important;
+	padding: 0 !important;
+    border-radius: 0px !important;
+	background: transparent url(https://web.archive.org/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/js/mediaelement/mejs-controls.svg) !important;
+	border: none !important;
+}
+
+.op-controls__progress:hover input[type=range]::-webkit-slider-thumb {
+	display: block !important;
+}
+
+.op-controls__progress:hover input[type=range]::-moz-range-thumb {
+	opacity: 1 !important;
+}
+
+.op-controls .op-controls__volume--display {
+    color: #66cc33 !important;
+}
+
+.op-controls__mute:before {
+	content: '' !important;
+	background: transparent url(/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/js/mediaelement/speaker.svg) !important;
+    height: 20px !important;
+    width: 20px !important;
+}
+
+.op-controls__settings:before {
+	content: '' !important;
+	background: transparent url(/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/js/mediaelement/control.svg) !important;
+    height: 20px !important;
+    width: 20px !important;
+}
+
+button.op-controls__fullscreen:before {
+	content: '' !important;
+	background: transparent url(/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/js/mediaelement/fullscreen.svg) !important;
+    height: 18px !important;
+    width: 18px !important;
+}
+
+.op-player__play, .op-player__play:hover {
+	border-color: transparent transparent transparent #66cc33 !important;
+}
+
+.op-player__video .op-controls__progress, #video-controls .op-controls__progress {
+    bottom: 0px !important;
+    left: 0px !important;
+    margin-left: 42px !important;
+    margin-right: 42px !important;
+    position: relative !important;
+    width: auto !important;
+}
+
+.op-player__video .op-controls__current, #video-controls .op-controls__current {
+    left: 25px;
+}
+
+.op-player__video .op-controls__duration, #video-controls .op-controls__duration {
+    right: 50px;
+}
+
+.op-player__video .op-controls button, #video-controls .op-controls button {
+	padding: 0 !important;
+}
+
+.op-player__video .op-controls time, #video-controls time {
+    top: 29px;
+	line-height: 0 !important;
+}
+
+.op-player__video .op-controls, #video-controls {
+    height: 30px !important;
+    margin-top: -30px !important;
+    padding-top: 5px !important;
+	position: relative !important;
+}
+
+#video-controls {
+    margin: 0px auto 20px !important;
+}
+
+.op-player {
+	background: white !important;
+}
+
+.op-controls button {
+    outline: none;
+}
+
+.op-player__video {
+    line-height: 0 !important;
+}
+
+.op-player__loader {
+    border-top-color: #66cc33 !important;
+}
+
+.op-player__media {
+	object-fit: cover;
+}
+
+[data-featherlight] img, .featherlight {
+	cursor: pointer !important;
+}
+
+.pswp {
+	z-index: 9999999999999999999 !important;
+}
+
+.header-nav {
+	z-index: 10 !important;
+}
+
+#bottom-nav {
+	padding: 30px 0 0 0 !important;
+}
+
+#protag-adm-branding-top {
+	margin-top: 30px;
+}
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.gallery-columns-2 figure {
+	width: 50%;
+}
+
+.gallery-columns-3 figure {
+	width: 33.33%;
+}
+
+.gallery-columns-4 figure {
+	width: 25%;
+}
+
+.gallery img {
+    width: 100%;
+    padding: 0 10px;
+}
+
+#mobile-logo { 
+   	position: absolute;
+   	margin-left: auto;
+   	margin-right: auto;
+   	left: 0;
+   	right: 0;
+   	width: 275px;
+    top: 3px;
+	opacity: 0;
+	transition: opacity 0.25s ease-out;
+}
+
+#white-logo {
+    height: 25px;
+    margin: auto;
+    position: absolute;
+    left: 0;
+    right: 0;
+	opacity: 0;
+	transition: opacity 0.25s ease-out;
+	cursor: pointer;
+}
+
+.sticky-nav {
+	position: fixed;
+   	top: 0;
+   	width: 100%;
+}
+
+.nav-container nav {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+body .nav-container {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}
+
+#nav-container.sticky-nav {
+    margin: auto;
+    width: 100%;
+    z-index: 999999;
+}
+
+#nav-container {
+	transition: 0.25s background ease-out;
+}
+
+#nav-container > div {
+    background: white;
+}
+
+footer {
+    position: relative;
+    z-index: 999999;
+    margin-bottom: -25px;
+    padding-bottom: 25px !important;
+}
+
+.sharecount a:after {
+	color: #1d2129;
+	content: attr(data-count);
+	font-size: 11px;
+    border: 1px solid #818181;
+    border-radius: 3px;
+	margin-top: -2px;
+	display: block;
+	border-top: none !important;
+    text-align: center;
+	height: 23px !important;
+	line-height: 24px !important;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.fb-share-button {
+    position: absolute !important;
+    margin-top: 43px;
+    margin-left: 9px;
+	display: none;
+}
+
+.fb-share-button > span {
+    overflow: hidden;
+}
+
+.fb-share-button iframe {
+    margin: -1px 0 0 -20px;
+	height: 20px !important;
+    width: 53px !important;
+}
+
+.sharecount i {
+	border-radius: 3px 3px 0 0 !important;
+	width: 35px !important;
+	height: 35px !important;
+}
+
+.choose-widget .category-custom-container .category-wrapper {
+	padding: 0 !important;
+}
+
+#warning-text {
+	margin-bottom: 10px;
+}
+
+.mejs-layers button {
+    outline: none;
+    border: none;
+}
+
+.category-custom-container .category-wrapper .category-wrapper-text {
+	overflow: hidden;
+    overflow-wrap: break-word;
+}
+
+#res1080 {
+	color: #66cc33;
+}
+
+#podcast-article-wrapper .article-wrapper img {
+	margin: 0 auto 10px auto;
+}
+
+#podcast-article-wrapper .article-content > a:first-child img {
+	margin: 0 auto 10px auto;
+    display: block;
+}
+
+#podcast-article-wrapper .support-us-box .hs-image img {
+    width: auto;
+    height: auto;
+}
+
+#right-wrapper > div > div {
+	margin: 0 !important;
+}
+
+#text-38, #text-39 {
+    margin-top: -45px;
+}
+
+.ad-blog {
+    text-align: center;
+	margin: -40px 0 10px 0;
+}
+
+.article-action-buttons-second {
+    margin: 10px 0;
+}
+
+.top-1-text {
+    max-height: 323px;
+    overflow: hidden;
+}
+
+.wp-video, #mep_0 {
+	width: auto !important;
+}
+
+.wp-video video {
+    width: 100% !important;
+}
+
+.podcast-bottom.category-custom-container .category-wrapper h3 {
+    color: #66cc33;
+}
+
+.podcasts {
+    border-top: 2px solid #66cc33;
+    margin-top: -5px;
+}
+
+.article-podcast {
+    margin-top: 25px;
+    border-top: 2px solid #66cc33;
+}
+
+.article-podcast .podcast-item .podcast-item a {
+    margin-bottom: 10px;
+    display: block;
+}
+
+.article-podcast .podcast-item .podcast-image {
+    max-width: 175px;
+    min-width: 175px;
+    margin: 0 10px 20px 0;
+}
+
+.article-podcast .podcast-item {
+    margin: 20px 0;
+}
+
+.article-podcast .podcast-item .podcast-name img {
+    bottom: -12px;
+}
+
+#sortableWrapper > .ui-sortable-handle:nth-last-child(3) {
+	display: none !important;
+}
+
+.primary-btn-red {
+    padding: 1px 0;
+}
+
+.ui-widget-overlay {
+    height: 100%;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #666666;
+    opacity: .5;
+}
+
+.ui-dialog {
+    border: 1px solid #c5c5c5;
+    background: white;
+	z-index: 1;
+    width: 500px !important;
+    padding: 20px;
+}
+
+.ui-dialog-titlebar {
+    display: none;
+}
+
+.ui-dialog-buttonset {
+    text-align: right;
+}
+
+.ui-dialog-buttonset button {
+	color: #ffffff;
+    background-color: #66cc33;
+    border: none;
+    padding: 2px 10px;
+	margin-left: 10px;
+}
+
+.inzercia-img {
+	height: 90px;
+	margin-right: 40px;
+}
+
+.inzercia h2 {
+	font-family: TitilliumWeb, serif;
+    color: #66cc33;
+	font-size: 70px;
+    font-weight: 600;
+    line-height: 70px;
+}
+
+.inzercia h3 {
+	font-family: TitilliumWeb, serif;
+    color: #292969;
+	font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.inzercia h4 {
+	font-family: TitilliumWeb, serif;
+    color: #66cc33;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.inzercia .ponuka {
+	max-width: 600px;
+    background: #66cc33;
+	color: white;
+	box-shadow: 0px 0px 15px 0px #bbb;
+	text-align: center;
+    padding-top: 10px;
+    margin-top: 30px;
+}
+
+.inzercia .ponuka h4 {
+	font-size: 35px;
+    font-weight: 600;
+    padding: 0 10px;
+    color: white;
+    text-align: center;
+}
+
+.inzercia .ponuka h5 {
+    margin-top: -10px;
+    font-size: 28px;
+    font-weight: 600;
+    padding: 0 10px;
+    color: white;
+}
+
+.inzercia .ponuka div {
+    background: white;
+	color: black;
+    padding: 8px 10px;
+    font-weight: 600;
+}
+
+.inzercia a {
+    font-weight: 700;
+    margin-top: 20px;
+    font-size: 20px;
+	cursor: pointer;
+}
+
+.link-left, .link-right {
+}
+
+#conditions ol {
+	list-style: none !important;
+	padding: 0 !important;
+}
+
+#conditions ol b {
+    display: block !important;
+    margin-top: 20px !important;
+    margin-bottom: -14px !important;
+}
+
+#conditions p {
+    margin-bottom: 10px !important;
+}
+
+#techspecs table {
+    text-align: left !important;
+}
+
+#techspecs td {
+    padding: 5px 12px !important;
+}
+
+#invoicing {
+	background: #f5f5f5;
+}
+
+#invoicing > div {
+	max-width: 920px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.article-tab-widget h2, .weather-widget h2, .caricature-widget h2, .facebook-widget h2, .widget-photo-of-the-day h2, .WidgetRecentPostsByCategory h2 {
+    font-weight: 500 !important;
+}
+
+.mobilebanner {
+	display: none;
+}
+
+.tv-program img {
+	width: 100%;
+}
+
+.podcast-item {
+	display: flex;
+    margin: 10px 0;
+    border-bottom: 2px solid #66cc33;
+}
+
+.podcast-item .podcast-image {
+	max-width: 140px;
+    margin: 0 10px 10px 0;
+    object-fit: cover;
+    height: 100px;
+}
+
+.podcast-widget .podcast-item .podcast-image {
+	min-width: 140px;
+}
+
+.podcast-item a {
+	color: #2b2d59;
+    font-weight: 600;
+}
+
+.podcast-item .podcast-name {
+	width: 100%;
+    position: relative;
+}
+
+.podcast-item .podcast-name .overflow-fix {
+	float: right;
+    position: inherit;
+	clear: right;
+}
+
+.podcast-item .podcast-name img {
+    position: absolute;
+    bottom: -2px;
+    right: 0;
+    background: white;
+}
+
+.odoberat {
+	color: #2b2d59;
+    font-weight: 700;
+	font-size: 16px !important;
+    padding-bottom: 8px;
+}
+
+.podcast-archive {
+    border-bottom: 2px solid #66cc33;
+    margin-bottom: 0px;
+}
+
+.podcast-archive > img {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    background: white;
+    padding-left: 5px;
+    width: 40px;
+}
+
+.archive-page-content .top-item {
+    position: relative;
+}
+
+.podcast-title {
+	display: inline-block;
+}
+
+img.podcast-title {
+	
+    margin: 0 !important;
+	display: inline;
+}
+img.podcast-title +h2.custom-blue.font-24.caricature-subtitle {
+	display: inline;
+}
+
+h2.podcast-title {
+    max-width: calc(100% - 0px) !important;
+    margin-left: 10px;
+}
+
+.wp-audio-shortcode {
+	margin-bottom: 0px !important;
+}
+
+.wp-video {
+	margin-bottom: 20px !important;
+}
+
+.mejs-container * {
+    font-family: TitilliumWeb, serif !important;
+}
+
+.mejs-audio .mejs-volume-button, .mejs-horizontal-volume-slider, .mejs-time-float {
+	display: none !important;
+}
+
+.mejs-fullscreen-button button {
+    margin-right: 0px;
+    right: 0;
+}
+
+.mejs-container .mejs-controls {
+	background: #fff !important;
+	padding: 0 !important;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-current {
+	background: #2b2d59 !important;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-total {
+    background: #c5c6c6 !important;
+}
+
+.mejs-time-handle-content {
+	background: transparent url(/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/js/mediaelement/mejs-controls.svg) !important;
+    height: 20px !important;
+    width: 20px !important;
+    display: block !important;
+    border: none !important;
+    top: -10px !important;
+}
+
+.mejs-resolution-button button {
+	background: transparent url(/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/js/mediaelement/control.svg) !important;
+    margin-left: 3px !important;
+	width: 21px;
+    height: 21px;
+}
+
+.mejs-overlay-play, .mejs-poster {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.mejs-time-rail:hover .mejs-time-handle-content {
+
+}
+
+.mejs-time-handle-content {
+    left: -9px !important;
+}
+
+.mejs-time {
+    color: #c5c6c6 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+}
+
+.mejs-audio .mejs-time {
+    color: #c5c6c6 !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+	padding: 0 !important;
+}
+
+.mejs-audio .mejs-playpause-button button {
+	margin-left: 0px !important;
+}
+
+.mejs-sourcechooser-selector {
+	background: rgba(50,50,50,.7);
+	color: white;
+    font-size: 14px;
+    position: absolute;
+    padding: 5px 4px;
+    margin-top: -100px;
+	display: none;
+    border-bottom: 4px solid white;
+}
+
+.mejs-sourcechooser-selector {
+	cursor: pointer;
+}
+
+.mejs-sourcechooser-selector > div {
+	padding: 8px 0px;
+	line-height: 0 !important;
+}
+
+.mejs-resolution-button:hover .mejs-sourcechooser-selector {
+	display: block;
+}
+
+.op-controls__fullscreen  {
+	padding: 0 !important;
+}
+
+.mejs-time-total {
+	margin-top: 7px !important;
+}
+
+.mejs-controls .mejs-time-rail .mejs-time-loaded {
+    background: #c5c6c6 !important;
+}
+
+.mejs-time-buffering, .mejs-time-current, .mejs-time-float, .mejs-time-float-corner, .mejs-time-float-current, .mejs-time-hovered, .mejs-time-loaded, .mejs-time-marker, .mejs-time-total {
+	height: 5px !important;
+}
+
+.mejs-audio .mejs-currenttime-container {
+    position: absolute;
+    top: -2px;
+    left: 32px;
+}
+
+.mejs-audio .mejs-duration-container {
+    position: absolute;
+    top: -2px;
+    right: 0px;
+}
+
+.mejs-video .mejs-time {
+    padding: 14px 6px 0 !important;
+}
+
+.mejs-container {
+    border: none !important;
+	background: white !important;
+}
+
+.mejs-time-rail {
+	margin: 0 !important;
+}
+
+#podcast-article-wrapper .hlavn-pred-obhasom {
+	display: none !important;
+}
+
+.current-category-ancestor a {
+    background-color: #66cc33;
+}
+
+.col-lg-7.main-content-wrapper .top-1-content {
+	margin-bottom: 20px !important;
+}
+
+.caricature-widget {
+	margin-top: 20px !important;
+}
+
+.podcast-odkaz {
+    color: #2b2d59;
+	font-weight: 700;
+    font-size: 16px !important;
+    padding: 2px 10px;
+    transition: all 0.2s ease-in-out;
+}
+
+.podcast-odkaz:hover {
+    color: #2b2d59;
+    background-color: #66cc33;
+}
+
+.grecaptcha-badge {
+    display: none !important;
+}
+
+.article-wrapper p {
+	line-height: 1.6 !important;
+}
+
+.podcast-widget .podcast-item .podcast-name a {
+    margin-bottom: 5px;
+	display: block;
+	-webkit-line-clamp: 4;
+	-webkit-box-orient: vertical;
+    height: 100px;
+   	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.navbar .mr-3 {
+	margin-right: 0px !important;
+}
+
+@media only screen and (max-width: 1500px) {
+	#white-logo {
+		display: none !important;
+	}
+	
+	.navbar .mr-3 {
+		margin-right: 1rem !important;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	#top-nav {
+    	max-width: 1200px !important;
+	}
+	
+	.main-content > div:nth-child(1) {
+		padding: 0 20px !important;
+	}
+	
+	.we-choose-container > div, .podcast-bottom > div, .blog-container > div {
+		padding: 0 20px 0 10px !important;
+	}
+	
+	.header-nav {
+    	position: fixed;
+    	width: 100%;
+    	z-index: 1;
+    	top: 0;
+	}
+	
+	.main-content .container.custom-container {
+		padding-left: 15px;
+    	padding-right: 25px;
+	}
+	
+	.main-logo {
+    	margin-top: 20px;
+	}
+	
+	#nav-container.sticky-nav {
+    	top: 30px;
+    	background: white;
+	}
+	
+	#mobile-logo {
+		display: none !important;
+	}
+	
+	.sticky-nav + #bottom-nav {
+  		padding-top: 50px;
+	}
+}
+
+@media only screen and (max-width: 1199px) {
+	#nav-container {
+    	background: white;
+	}
+	
+	#nav-container nav {
+		margin-top: 5px !important;
+	}
+	
+	#nav-container.sticky-nav #mobile-logo {
+    	opacity: 1;
+	}
+}
+
+@media only screen and (min-width: 991px) {
+	#text-13, #div-gpt-ad-za_clankom {
+		display: none !important;
+	}
+}
+
+@media only screen and (max-width: 991px) {
+	#text-29, #hlavn-3af475a8ce2413c76d3a4b87cb256b2d, .hlavn-pred-obhasom, #text-31 {
+		display: none !important;
+	}
+	
+	.podcast-odkaz {
+    	padding: 2px 7px;
+	}
+}
+
+@media only screen and (min-width: 768px) {
+	.link-left {
+		margin-left: 140px;
+	}
+	
+	.article-podcast .podcast-item .podcast-image {
+		height: 120px;
+	}
+	
+	.article-podcast .podcast-item a {
+    	font-size: 18px;
+	}
+}
+
+@media only screen and (max-width: 767px) {
+	html {
+    	overflow-x: hidden;
+	}
+	
+	.article-podcast .podcast-item .podcast-image {
+		max-width: 120px;
+		min-width: 120px;
+	}
+	
+	.inzercia-img, .link-middle {
+		display: none;
+	}
+	
+	.link-left {
+		margin-left: 15px !important;
+		width: 100%;
+    	margin-top: 30px !important;
+	}
+	
+	.link-right {
+		margin-left: 15px !important;
+		margin-top: 10px !important;
+		width: 100%;
+	}
+	
+	.mobile-margin {
+    	margin: 20px 1px !important;
+	}
+	
+	.inzercia h2 {
+    	font-size: 45px !important;
+    	line-height: 45px !important;
+	}
+	
+	.podcast-widget .podcast-item .podcast-name a {
+		display: block;
+		-webkit-line-clamp: 4;
+		-webkit-box-orient: vertical;
+	    height: 100px;
+    	overflow: hidden;
+		text-overflow: ellipsis;
+	}
+	
+	.podcast-widget {
+		margin-bottom: 20px !important;
+	}
+	
+	.article-podcast .podcast-item .podcast-name a {	
+    	display: block;
+   		width: calc(100% - 40px);
+    	display: block;
+    	-webkit-line-clamp: 4;
+    	-webkit-box-orient: vertical;
+    	overflow: hidden;
+		height: 100px;
+	}
+}
+
+@media only screen and (max-width: 400px) {
+	#googlenews span {
+		display: none !important;
+	}
+	
+	#mobile-logo {
+    	width: 230px;
+    	top: 6px !important;
+	}
+}
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: #fff transparent #fff transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*
+     FILE ARCHIVED ON 09:57:13 Mar 02, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:18:35 Apr 25, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 469.092
+  exclusion.robots: 0.107
+  exclusion.robots.policy: 0.096
+  cdx.remote: 0.077
+  esindex: 0.01
+  LoadShardBlock: 401.636 (3)
+  PetaboxLoader3.datanode: 207.913 (5)
+  CDXLines.iter: 21.709 (3)
+  PetaboxLoader3.resolve: 106.104 (3)
+  load_resource: 276.219 (2)
+*/
