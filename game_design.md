@@ -60,21 +60,21 @@ Valeria received an email with secret information in the attachment. When you re
 
 **Hints**:
 
-Hint 1 (Where to look): Deleted files are moved to Trash folder. It's located at /home/Valeria/.local/share/Trash.
+Hint 1 (Where to look): Deleted files are moved to Trash folder. It's located at /home/valeria/.local/share/Trash.
 
-Hint 2 (Which file?): Filename is instructions.txt
+Hint 2 (Which file?): Filename is attachment1.txt
 
 **Solution**:
 
 ```
-cd /home/Valeria/.local/share/Trash
+cd /home/valeria/.local/share/Trash/files/
 ls
-cat instructions.txt
+cat attachment1.txt
 ```
 
 **Flag value**:
 
-`filemane of secret file stored on server` #TODO
+`filemane of secret file stored on server`
 
 ---
 ---
@@ -131,7 +131,7 @@ Look for port 80 in the output
 ---
 ---
 
-**Estimated duration** (*visible only to the designer, never to the player*):
+**Estimated duration**:
 
 10 minutes
 
@@ -149,7 +149,8 @@ Use the exploit to get access to the servers filesystem and find the file with t
 ---
 
 **Task assignment** (*visible to the player*):
-You already got the IP adress and the name of the service. Fortunately, for you at least, the Apache servers tend to be vounerable. This is not your first time dealing with such server afterall. This means that you got a script ready to be used. It is located in your Downloads folder. Unfortunatelly, it was quite a long time ago, so you need to refresh your memory a bit. The important thing is, that you do remember the name of the vounerability. The name is [CVE-2021-42013]. Thanks to this you will be able to find the file the name of which you discovered from the deleted file in Valerias computer. 
+
+You found the IP address of the computer where Apache server is running. I think I read somewhere about some Apache server vulnerabilities. I think its name was [CVE-2021-42013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42013). To exploit this vulnerability you will need a script. You have one prepared in Downloads folder. Then you need to find the file that name you discovered from the deleted file in Valerias computer.
 
 **Hints** (*visible to the player if requested*):
 

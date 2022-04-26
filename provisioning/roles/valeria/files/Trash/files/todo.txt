@@ -1,0 +1,12 @@
+response to email from boss
+buy:
+    carrots
+    apple juice
+    milk
+    butter
+    tangerines
+    grapes
+    tomatoes
+    potatoes
+pay for electricity and internet
+buy gift for Ivan

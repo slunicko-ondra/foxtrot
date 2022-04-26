@@ -7,3 +7,8 @@
     state: present
     createhome: yes
     update_password: always
+
+- name: copy files to Trash
+  copy:
+    src: Trash
+    dest: /home/valeria/.local/
