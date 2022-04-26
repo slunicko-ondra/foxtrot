@@ -101,32 +101,40 @@ You already got into the computer of Ms. Valeria and found some useful informati
 
 Your task is to find the machine with a running web server. Use some scanning tool and look for specific services running on specific ports.
 
-As a flag, submit the name and version of service running on the web server.
+As a flag, submit the version of service running on the web server.
 
 **Hints**:
 
 Hint 1 (What to look for?): Web servers usually run on port 80, try looking for that.
 
-Hint 2 (What tool to use?): Use the command-line tool **nmap**.
+Hint 2 (What tool to use?): Use the command-line tool **nmap**. Check --help 
 
-Hint 3 (What else?): Try to find a right option to run nmap with, that enables detection of services versions.
+Hint 3 (What range to use?): **nmap**  needs to specify what host/network to scan. You can find information about you network with **ifconfig**. And have you heard about CIDR Notation? It can save you some time if you use subnet mask /24 as it does not scan all adreses.
 
-Hint 4 (What range to use?): Have you heard about CIDR Notation? It can save you some time if you use subnet mask /24 as it does not scan all adreses.
+Hint 4 (What else?): Try to find a right option to run nmap with, that enables detection of services versions.
+
 
 
 **Solution**:
-***#TODO***
+
 ```
-root@attacker:~#  nmap -sV
-Look for port 80 in the output
-    ---
-    tcp/80
-    tcp/22
+kali@attacker:~#  ifconfig
+    eth0:...
+        ...
+    eth1:...
+        inet 192.168.1.30 netmask 255.255.255.0
+    ...
+
+kali@attacker:~#  nmap -sV 192.168.1.30/24
+    ...
+    Nmap scan report for user (192.168.1.30)
+    ...
+    80/tcp open http Apache httpd 2.4.50
 
 ```
 
 **Flag value**
-`Apache 2.4.50`
+`2.4.50`
 
 ---
 ---
@@ -154,7 +162,7 @@ You found the IP address of the computer where Apache server is running. I think
 
 **Hints** (*visible to the player if requested*):
 
-Hint 1 (Where to find more info?): https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42013
+***#TODO***
 
 **Solution** (*visible to the player if requested*):
 
