@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.10",
+      ip: "192.168.1.30",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"
@@ -51,6 +51,7 @@ Vagrant.configure("2") do |config|
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 1024
       vb.cpus = 1
+      vb.gui = false
     end
     device.vm.synced_folder ".",
       "/vagrant",
@@ -58,7 +59,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.20",
+      ip: "192.168.1.4",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"
@@ -79,6 +80,7 @@ Vagrant.configure("2") do |config|
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 2048
       vb.cpus = 1
+      vb.gui = false
     end
     device.vm.synced_folder ".",
       "/vagrant",
@@ -86,7 +88,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.30",
+      ip: "192.168.1.19",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"
@@ -107,6 +109,7 @@ Vagrant.configure("2") do |config|
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 1024
       vb.cpus = 1
+      vb.gui = false
     end
     device.vm.synced_folder ".",
       "/vagrant",
@@ -114,7 +117,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.40",
+      ip: "192.168.1.6",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"
@@ -135,6 +138,7 @@ Vagrant.configure("2") do |config|
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 1024
       vb.cpus = 1
+      vb.gui = false
     end
     device.vm.synced_folder ".",
       "/vagrant",
@@ -142,7 +146,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.50",
+      ip: "192.168.1.3",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"

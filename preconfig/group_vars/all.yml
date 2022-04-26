@@ -1,10 +1,10 @@
 ---
 device_aliases:
-  10.10.10.1: router
-  10.10.10.10: attacker
-  10.10.10.20: server
-  10.10.10.30: user
-  10.10.10.40: server2
-  10.10.10.50: server3
+  192.168.1.1: router
+  192.168.1.30: attacker
+  192.168.1.4: server
+  192.168.1.19: user
+  192.168.1.6: server2
+  192.168.1.3: server3
   100.100.100.1: router
 ...
