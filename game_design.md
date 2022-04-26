@@ -28,11 +28,15 @@ Hint 1 (What tool to use?): Use the command-line  **ssh**. Type `ssh --help` for
 Hint 2 (What login to use?): Use the first and last name of the secretary (in lowercase) as login and password
 
 **Solution**:
-ssh valeria:user -p #type "ivanovna" as password
+
+```
+ssh valeria@user
+valeria@user's password: ivanovna
+```
 
 **Flag value**:
 
-ivanovna
+`ivanovna`
 
 ---
 ---
@@ -56,7 +60,7 @@ Find the secret file in the file system. It's a text file in Trash folder.
 
 **Task assignment**:
 
-Valeria received an email with secret information in the attachment. When you receive secret instructions, after reading you should probably delete them, right? However, is deleted file lost forever? Find the (not yet published) secret file and use it's name as a flag.
+Valeria received an email with secret information in the attachment. When you receive secret instructions, after reading you should probably delete them, right? However, is deleted file lost forever? Find the location of the (not yet published) secret file and use the location itself as a flag.
 
 **Hints**:
 
@@ -74,7 +78,7 @@ cat attachment1.txt
 
 **Flag value**:
 
-`filemane of secret file stored on server`
+`/articles/secret/`
 
 ---
 ---
@@ -158,20 +162,26 @@ Use the exploit to get access to the servers filesystem and find the secret file
 
 **Task assignment** (*visible to the player*):
 
-You found the IP address of the computer where Apache server is running. I think I read somewhere about some Apache server vulnerabilities. I think its name was [CVE-2021-42013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42013). To exploit this vulnerability you will need a script. You have one prepared in Downloads folder. Then you need to find the file that name you discovered from the deleted file in Valerias computer.
+You already got the IP address and the name of the service. Fortunately for you, the Apache servers tend to be vulnerable. After all, this is not your first time dealing with such a server. This means that you got a script ready to be used. It is located in your Downloads folder. Unfortunately, it was quite a long time ago, so you need to refresh your memory a bit. The important thing is that you do remember the name of the vulnerability. The name is [CVE-2021-42013]. Thanks to this, you will be able to find the file the name which you discovered from the deleted file on Valeria's computer. The flag itself is the last word in the file (consisting of two parts connected with -).
 
 **Hints** (*visible to the player if requested*):
 
-***#TODO***
+Hint 1 (Where to find more info?): https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42013
+
+Hint 2 (Where is the Downloads folder?): /home/kali/Downloads
+
+Hint 3 (How to use multiple commands in one call?): Make use of quotes. For example "cd /articles/ && ls"
 
 **Solution** (*visible to the player if requested*):
 
-***#TODO***
+```
+python3 cve-2021-42013.py -u http://192.168.1.4 -s "cd /articles/secret && cat new_information"
+```
 
 
 **Flag value** (*visible to the player if they solve the level*):
 
-`model name (you'll understand, when you find it)`
+`Gagarin-mk1`
 
 ---
 ---
