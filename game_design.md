@@ -60,24 +60,22 @@ Valeria received an email with instructions in the attachment. When you received
 
 **Hints** (*visible to the player if requested*):
 
-Hint 1 (Where to look): Deleted files are moved to Trash folder. It's located at /home/Valeria/.local/share/Trash.
+Hint 1 (Where to look): Deleted files are moved to Trash folder. It's located at /home/valeria/.local/share/Trash.
 
-Hint 2 (Which file?): Filename is instructions.txt (#TODO)
+Hint 2 (Which file?): Filename is attachment1.txt
 
 **Solution** (*visible to the player if requested*):
-
-***#TODO***
 ```
-cd /home/Valeria/.local/share/Trash
+cd /home/valeria/.local/share/Trash/files/
 ls
-cat instructions.txt
+cat attachment1.txt
 ```
 
 **Flag value** (*visible to the player if they solve the level*):
 
 What should the player discover after successfully solving the level:
 
-`filemane of secret file stored on server` (#TODO)
+`full path to secret folder`
 
 ---
 ---
