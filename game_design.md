@@ -1,49 +1,49 @@
 # StopThePropaganda
 
-You are a member of a technically proficient group of people fighting the disinformation scene. You gathered information from your secret source about disinformation web magazine ‘Hladné Správy’. From the information, you found out that this magazine has obtained documents containing a load of false information and one unnamed country's leadership provided these documents. On top of that, this country reportedly paid the magazine to release the information all over the internet as true articles and that is why we need to stop them and hand the documents to authorities. 
+You are a member of a technically proficient group of people fighting the disinformation scene. You gathered information from your secret source about disinformation web magazine ‘Hladné Správy’. From the information, you found out that this magazine has obtained documents containing a load of false information and one unnamed country's government provided these documents. On top of that, this country reportedly paid the magazine to release the information all over the internet as true articles and that is why we need to stop them and hand the documents to authorities. 
 We found out the exact location of the magazine's offices and your task is to go there and get access to those incriminating documents in their network. Go there when the offices are empty and try not to get exposed. The best way would be to get to the chief editor's computer, but he takes it home with him. However, his secretary probably doesn't. Start there and good luck. 
 
 
 ## Level 1: Get access 
 
-**Objective** (*visible only to the designer, never to the player*):
+**Objective**:
 
 The player should get access to secretary computer using SSH.
 
 ---
 ---
 
-**Task assignment** (*visible to the player*):
+**Task assignment**:
 
 As you probably know, most of the attacks start with gathering some information about the victim and does not have to happen online. If you have access to the victim’s trash cans or their table where they sit, there may be some valuable pieces of information. 
 
 When this is not possible, social media or blogging websites are also options where you can find hobbies or other compromising info on the victim. But I have a feeling you do not need this type of information.
 
-When you came to the offices, the building was locked and the only possible entrance you found was the window right next to the cheif editors secretary table. You cannot physically access her computer but it looks like it is turned on. Once you gather some information, you can start with getting the remote access to the computer of the secretary. Maybe access through the terminal will be efficient, but you will definitely need login and password. 
+When you came to the offices, the building was locked and the only possible entrance you found was the window right next to the cheif editors secretary table. You cannot physically access her computer but it looks like it is turned on. Once you gather some information, you can start with getting the remote access to the computer of the secretary. Maybe access through the terminal will be sufficient, but you will definitely need login and password. 
  
-**Hints** (*visible to the player if requested*):
+**Hints**:
 
 Example: Hint 1 (What tool to use?): Use the command-line  **ssh**. Type `ssh --help` for more info.
 Example: Hint 2 (What login to use?): Use the first and last name of the secretary and change it to lowercase and use them as login and password
 
-**Solution** (*visible to the player if requested*):
+**Solution**:
 
-**Flag value** (*visible to the player if they solve the level*):
+(name):(password)
 
-What should the player discover after successfully solving the level:
+**Flag value**:
 
-`secretary_username` : `secretary_password`
+valeria:ivanovna
 
 ---
 ---
 
-**Estimated duration** (*visible only to the designer, never to the player*):
+**Estimated duration**:
 
-[Number] minutes (for the average player to complete the level)
+7 minutes
 
-**Learning outcomes** (*visible only to the designer, never to the player*):
+**Learning outcomes**:
 
-That reconnaissance is important part of hacking and you don't have to use computer to discover useful information. And also basic bash command knowledge.
+That reconnaissance is important part of hacking and you don't always have to use computer to discover useful information. And also basic knowledge about ssh command.
 
 ## Level 2: Find that file
 
