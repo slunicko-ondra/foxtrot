@@ -1,4 +1,4 @@
-# <TODO_name_of_your_game>
+# StopThePropaganda
 
 <**TODO** Students, replace all text in angle brackets in this file with your custom description.>
 

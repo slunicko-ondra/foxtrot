@@ -113,18 +113,20 @@ Hint 1 (What to look for?): Web servers usually run on port 80, try looking for 
 
 Hint 2 (What tool to use?): Use the command-line tool **nmap**.
 
-Hint 3 (What range to use?): Have you heard about CIDR Notation? It can save you some time if you use subnet mask /24.
+Hint 3 (What else?): Try to find a right option to run nmap with, that enables detection of services versions.
+
+Hint 4 (What range to use?): Have you heard about CIDR Notation? It can save you some time if you use subnet mask /24.
 
 
 **Solution**:
 ***#TODO***
 ```
-root@attacker:~#  nmap
+root@attacker:~#  nmap -sV
 Look for port 80 in the output
     ---
     tcp/80
     tcp/22
-The flag is 25790
+
 ```
 
 **Flag value**
@@ -151,12 +153,11 @@ Use the exploit to get access to the servers filesystem and find the file with t
 ---
 
 **Task assignment** (*visible to the player*):
-
-You found the IP address of the computer where Apache server is running. I think I read somewhere about some Apache server vulnerabilities. I think its name was [CVE-2021-42013](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42013). To exploit this vulnerability you will need a script. You have one prepared in Downloads folder. Then you need to find the file that name you discovered from the deleted file in Valerias computer.
+You already got the IP adress and the name of the service. Fortunately, for you at least, the Apache servers tend to be vounerable. This is not your first time dealing with such server afterall. This means that you got a script ready to be used. It is located in your Downloads folder. Unfortunatelly, it was quite a long time ago, so you need to refresh your memory a bit. The important thing is, that you do remember the name of the vounerability. The name is [CVE-2021-42013]. Thanks to this you will be able to find the file the name of which you discovered from the deleted file in Valerias computer. 
 
 **Hints** (*visible to the player if requested*):
 
-***#TODO***
+Hint 1 (Where to find more info?): https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42013
 
 **Solution** (*visible to the player if requested*):
 
