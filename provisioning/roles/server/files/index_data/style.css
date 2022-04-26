@@ -1,0 +1,1453 @@
+/*
+.navbar {
+    background-color: $primary-blue;
+    color: #ffffff;
+    .navbar-collapse {
+        @media (max-width: 991.98px) {
+            padding: 10px;
+        }
+        .nav-item-subscribe {
+            @media (max-width: 991.98px) {
+                margin-top: 10px;
+            }
+        }
+
+        .nav-item-subscribe .nav-link {
+        @media (max-width: 991.98px) {
+                float: none !important;
+            }
+        }
+        .nav-item {
+            .nav-link {
+                color: #ffffff !important;
+                @media (max-width: 991.98px) {
+                    display: inline-block;
+                    padding: .5rem 1rem;
+                }
+                &.support-us-btn,
+                &.login-btn,
+                &.subscribe-btn,
+                &.logout-btn {
+                    background-color: $primary-green;
+                    i {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+    .navbar-toggler {
+        border: none;
+        &:focus {
+            outline: none;
+        }
+        .navbar-toggler-icon {
+            background-image: none;
+            background-color: #ffffff;
+            height: 2px;
+            display: flex;
+            margin: 7px;
+        }
+    }
+}
+
+.main-nav {
+    .nav-item {
+        .nav-link {
+            color: #000000;
+            padding: 2px 5px;
+            font-size: 14px;
+            font-weight: bold;
+            -webkit-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            &.active {
+                background-color: $primary-green;
+            }
+            &:hover {
+                background-color: $primary-green;
+            }
+        }
+    }
+}
+
+*/
+.navbar.header-nav {
+  background-color: #333463;
+  color: #ffffff;
+}
+@media (max-width: 575.98px) {
+  .navbar.header-nav .navbar-nav.left-size-nav, .navbar.header-nav .navbar-nav.right-side-nav, .navbar.header-nav .navbar-nav.nav-btns-right {
+    margin: 0 !important;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar.header-nav .navbar-nav.left-size-nav .nav-item, .navbar.header-nav .navbar-nav.right-side-nav .nav-item, .navbar.header-nav .navbar-nav.nav-btns-right .nav-item {
+    width: 50%;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar.header-nav .navbar-nav.left-size-nav .nav-item .nav-link, .navbar.header-nav .navbar-nav.right-side-nav .nav-item .nav-link, .navbar.header-nav .navbar-nav.nav-btns-right .nav-item .nav-link {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+  }
+  .navbar.header-nav .navbar-nav.left-size-nav .nav-item .nav-link.support-us-btn, .navbar.header-nav .navbar-nav.right-side-nav .nav-item .nav-link.support-us-btn, .navbar.header-nav .navbar-nav.nav-btns-right .nav-item .nav-link.support-us-btn {
+    background-color: #333463;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar.header-nav .navbar-nav.left-size-nav.left-size-nav, .navbar.header-nav .navbar-nav.right-side-nav.left-size-nav, .navbar.header-nav .navbar-nav.nav-btns-right.left-size-nav {
+    background-color: #333463;
+  }
+}
+@media (max-width: 575.98px) {
+  .navbar.header-nav .navbar-nav.left-size-nav.right-side-nav, .navbar.header-nav .navbar-nav.right-side-nav.right-side-nav, .navbar.header-nav .navbar-nav.nav-btns-right.right-side-nav {
+    background-color: #66cc33;
+  }
+}
+.navbar.header-nav .navbar-nav.nav-btns-right .nav-item .nav-link {
+  color: #ffffff !important;
+  padding: 3px 8px !important;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: #66cc33;
+}
+@media (max-width: 575.98px) {
+  .navbar.header-nav .navbar-nav.nav-btns-right .nav-item .nav-link {
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    padding: 0.25rem 0.5rem;
+    text-align: center;
+  }
+}
+.navbar.header-nav .navbar-nav.nav-btns-right .nav-item .nav-link .header-login-icon {
+  position: relative;
+  left: 6px;
+  bottom: 2px;
+}
+@media (max-width: 575.98px) {
+  .navbar.header-nav .navbar-nav.nav-btns-right .nav-item .nav-link .header-login-icon {
+    position: absolute;
+    -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    transform: translateX(-50%);
+    left: 50%;
+    bottom: 5px;
+  }
+}
+.navbar.header-nav .nav-item .nav-link {
+  color: #ffffff !important;
+  padding: 3px 8px !important;
+  font-size: 16px;
+  font-weight: 400;
+}
+@media (max-width: 991.98px) {
+  .navbar.header-nav .nav-item .nav-link {
+    display: inline-block;
+  }
+}
+.navbar.header-nav .nav-item .nav-link.support-us-btn, .navbar.header-nav .nav-item .nav-link.login-btn, .navbar.header-nav .nav-item .nav-link.subscribe-btn, .navbar.header-nav .nav-item .nav-link.logout-btn {
+  background-color: #66cc33;
+}
+.navbar.header-nav .nav-item .nav-link.support-us-btn {
+  width: 121px;
+  text-align: center;
+}
+.navbar.header-nav .navbar-toggler {
+  border: none;
+}
+.navbar.header-nav .navbar-toggler:focus {
+  outline: none;
+}
+.navbar.header-nav .navbar-toggler .navbar-toggler-icon {
+  background-image: none;
+  background-color: #ffffff;
+  height: 2px;
+  display: flex;
+  margin: 7px;
+}
+
+.navbar .navbar-toggler {
+  border: none;
+}
+.navbar .navbar-toggler:focus {
+  outline: none;
+}
+.navbar .main-nav-search {
+  color: #333463;
+}
+.navbar .main-nav-search:hover {
+  color: #333463;
+}
+.navbar .navbar-toggler-icon {
+  width: 22px;
+  background-image: url("/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/assets/podporujem/img/hamburger-menu.svg");
+}
+
+.main-nav .nav-item .nav-link {
+  color: #000000;
+  padding: 2px 5px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 20px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.main-nav .nav-item .nav-link.active {
+  background-color: #66cc33;
+}
+.main-nav .nav-item .nav-link:hover {
+  background-color: #66cc33;
+}
+
+.sub-nav .nav-item {
+  margin: 0 0.25rem;
+}
+.sub-nav .nav-item .nav-link {
+  color: #000000;
+  padding: 2px 5px;
+  font-size: 14px;
+  -webkit-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+.sub-nav .nav-item .nav-link.active {
+  background-color: #66cc33;
+}
+.sub-nav .nav-item .nav-link:hover {
+  background-color: #f2f3f4;
+}
+
+#login-page {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+}
+#login-page .login-page-content {
+  margin: auto;
+}
+#login-page .login-page-content .main-logo img {
+  width: 100%;
+}
+#login-page .login-page-content .login-window {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px 0px gray;
+  -moz-box-shadow: 0px 0px 20px 0px gray;
+  box-shadow: 0px 0px 20px 0px gray;
+  max-width: 600px;
+}
+#login-page .login-page-content .login-window .register-step-2,
+#login-page .login-page-content .login-window .login-step-forgot-password {
+  display: none;
+}
+#login-page .login-page-content .login-window .close-login-register-popup {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#login-page .login-page-content .login-window h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 26px;
+}
+#login-page .login-page-content .login-window p {
+  font-size: 14px;
+}
+#login-page .login-page-content .login-window .register-form form .form-group {
+  /*&:first-child {
+      label i {
+          color: $primary-blue;
+      }
+      input {
+          border: 2px solid $primary-blue;
+      }
+  }*/
+}
+#login-page .login-page-content .login-window .register-form form .form-group label i {
+  font-size: 18px;
+  color: #66cc33;
+}
+#login-page .login-page-content .login-window .register-form form .form-group input {
+  border: 2px solid #66cc33;
+  border-radius: 0;
+  position: relative;
+}
+#login-page .login-page-content .login-window .register-form form .form-group input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #333463;
+}
+#login-page .login-page-content .login-window .register-form form .more-register-options {
+  font-weight: bold;
+  font-size: 14px;
+}
+#login-page .login-page-content .login-window .register-form form .more-register-options a {
+  text-decoration: none;
+}
+#login-page .login-page-content .login-window .register-form form .more-register-options a i {
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+#login-page .login-page-content .login-window .register-form form .more-register-options a i:hover {
+  background-color: #ffffff !important;
+}
+#login-page .login-page-content .login-window .register-form form .more-register-options a i:hover.fa-facebook-f {
+  color: #3b5999;
+}
+#login-page .login-page-content .login-window .register-form form .more-register-options a i:hover.fa-vk {
+  color: #4c75a3;
+}
+#login-page .login-page-content .login-window .register-form form .more-register-options a i.fa-facebook-f {
+  background-color: #3b5999;
+}
+#login-page .login-page-content .login-window .register-form form .more-register-options a i.fa-vk {
+  background-color: #4c75a3;
+}
+#login-page .login-page-content .login-window .register-form form .gdpr-check {
+  font-size: 14px;
+}
+#login-page .login-page-content .login-window .register-form form .gdpr-check a {
+  color: #000000;
+  text-decoration: underline;
+}
+#login-page .login-page-content .login-window .register-form form .register-btn,
+#login-page .login-page-content .login-window .register-form form .login-btn {
+  color: #ffffff;
+  background-color: #66cc33;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #66cc33;
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+#login-page .login-page-content .login-window .register-form form .register-btn:hover,
+#login-page .login-page-content .login-window .register-form form .login-btn:hover {
+  color: #66cc33;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+#login-page .login-page-content .login-window .register-form form .forgot-password-btn {
+  font-size: 14px;
+  color: #000000;
+  text-decoration: underline;
+}
+#login-page .login-page-content .login-window .register-form form .forgot-password-btn:hover {
+  text-decoration: none;
+}
+#login-page .login-page-content .login-window .register-form form .forgot-password-text {
+  font-weight: bold;
+  font-size: 14px;
+}
+#login-page .login-page-content .login-window .register-form form p a {
+  color: #000000;
+  text-decoration: underline;
+}
+#login-page .login-page-content .login-window .register-form form p a:hover {
+  text-decoration: none;
+}
+
+#register-page {
+  width: 100%;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+}
+#register-page .register-page-content {
+  margin: auto;
+}
+#register-page .register-page-content .main-logo img {
+  width: 100%;
+}
+#register-page .register-page-content .register-window {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 0px 20px 0px gray;
+  -moz-box-shadow: 0px 0px 20px 0px gray;
+  box-shadow: 0px 0px 20px 0px gray;
+  max-width: 600px;
+}
+#register-page .register-page-content .register-window .register-step-2,
+#register-page .register-page-content .register-window .login-step-forgot-password {
+  display: none;
+}
+#register-page .register-page-content .register-window .close-login-register-popup {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+#register-page .register-page-content .register-window h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 26px;
+}
+#register-page .register-page-content .register-window p {
+  font-size: 14px;
+}
+#register-page .register-page-content .register-window .register-form form .form-group {
+  /*&:first-child {
+      label i {
+          color: $primary-blue;
+      }
+      input {
+          border: 2px solid $primary-blue;
+      }
+  }*/
+}
+#register-page .register-page-content .register-window .register-form form .form-group label i {
+  font-size: 18px;
+  color: #66cc33;
+}
+#register-page .register-page-content .register-window .register-form form .form-group input {
+  border: 2px solid #66cc33;
+  border-radius: 0;
+  position: relative;
+}
+#register-page .register-page-content .register-window .register-form form .form-group input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #333463;
+}
+#register-page .register-page-content .register-window .register-form form .more-register-options {
+  font-weight: bold;
+  font-size: 14px;
+}
+#register-page .register-page-content .register-window .register-form form .more-register-options a {
+  text-decoration: none;
+}
+#register-page .register-page-content .register-window .register-form form .more-register-options a i {
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+#register-page .register-page-content .register-window .register-form form .more-register-options a i:hover {
+  background-color: #ffffff !important;
+}
+#register-page .register-page-content .register-window .register-form form .more-register-options a i:hover.fa-facebook-f {
+  color: #3b5999;
+}
+#register-page .register-page-content .register-window .register-form form .more-register-options a i:hover.fa-vk {
+  color: #4c75a3;
+}
+#register-page .register-page-content .register-window .register-form form .more-register-options a i.fa-facebook-f {
+  background-color: #3b5999;
+}
+#register-page .register-page-content .register-window .register-form form .more-register-options a i.fa-vk {
+  background-color: #4c75a3;
+}
+#register-page .register-page-content .register-window .register-form form .gdpr-check {
+  font-size: 14px;
+}
+#register-page .register-page-content .register-window .register-form form .gdpr-check a {
+  color: #000000;
+  text-decoration: underline;
+}
+#register-page .register-page-content .register-window .register-form form .register-btn,
+#register-page .register-page-content .register-window .register-form form .login-btn {
+  color: #ffffff;
+  background-color: #66cc33;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #66cc33;
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+#register-page .register-page-content .register-window .register-form form .register-btn:hover,
+#register-page .register-page-content .register-window .register-form form .login-btn:hover {
+  color: #66cc33;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+#register-page .register-page-content .register-window .register-form form .forgot-password-btn {
+  font-size: 14px;
+  color: #000000;
+  text-decoration: underline;
+}
+#register-page .register-page-content .register-window .register-form form .forgot-password-btn:hover {
+  text-decoration: none;
+}
+#register-page .register-page-content .register-window .register-form form .forgot-password-text {
+  font-weight: bold;
+  font-size: 14px;
+}
+#register-page .register-page-content .register-window .register-form form p a {
+  color: #000000;
+  text-decoration: underline;
+}
+#register-page .register-page-content .register-window .register-form form p a:hover {
+  text-decoration: none;
+}
+
+#pay-by-transfer-page .main-content-info h1 {
+  font-size: 56px;
+  font-weight: bold;
+  color: #66cc33;
+  text-transform: uppercase;
+}
+@media (max-width: 575.98px) {
+  #pay-by-transfer-page .main-content-info h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 575.98px) {
+  #pay-by-transfer-page .main-content-info .order-summary {
+    font-size: 14px;
+  }
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscription-description {
+  font-size: 22px;
+}
+@media (max-width: 575.98px) {
+  #pay-by-transfer-page .main-content-info .order-summary .subscription-description {
+    font-size: 14px;
+  }
+}
+#pay-by-transfer-page .main-content-info .order-summary .form-group input {
+  border-radius: 0;
+  border-color: #66cc33;
+  border-width: 2px;
+}
+#pay-by-transfer-page .main-content-info .order-summary .form-group input:focus {
+  box-shadow: none;
+}
+#pay-by-transfer-page .main-content-info .order-summary .cancel-text-info {
+  color: #66cc33 !important;
+  font-size: 16px;
+}
+@media (max-width: 575.98px) {
+  #pay-by-transfer-page .main-content-info .order-summary .cancel-text-info {
+    font-size: 12px;
+  }
+}
+#pay-by-transfer-page .main-content-info .order-summary .final-price-wrapper {
+  text-transform: uppercase;
+  font-size: 22px;
+  font-weight: bold;
+}
+@media (max-width: 575.98px) {
+  #pay-by-transfer-page .main-content-info .order-summary .final-price-wrapper {
+    font-size: 16px;
+  }
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box {
+  -webkit-box-shadow: 0px 0px 20px 0px gray;
+  -moz-box-shadow: 0px 0px 20px 0px gray;
+  box-shadow: 0px 0px 20px 0px gray;
+  overflow: hidden;
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-head {
+  background-color: #66cc33;
+  color: #ffffff;
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-head p {
+  font-size: 20px;
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-head .price {
+  font-size: 60px;
+  font-weight: bold;
+  line-height: 1.2;
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-body {
+  background-color: #ffffff;
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-body .check-list {
+  list-style-type: none;
+  display: inline-block;
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-body .check-list li {
+  font-size: 14px;
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-body .check-list li .cross-icon {
+  color: #e93a2c;
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-body .check-list li .check-icon {
+  color: #66cc33;
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-body .order-subscribe-btn {
+  color: #66cc33;
+  background-color: transparent;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+  border: 2px solid #66cc33;
+  display: block;
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-body .order-subscribe-btn:hover, #pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-body .order-subscribe-btn.active {
+  color: #ffffff;
+  background-color: #66cc33;
+  text-decoration: none;
+}
+#pay-by-transfer-page .main-content-info .order-summary .subscribe-box .subscribe-box-body p {
+  font-size: 14px;
+  font-weight: 300;
+}
+#pay-by-transfer-page .payment-company-section {
+  position: relative;
+  display: none;
+}
+#pay-by-transfer-page .payment-company-section .hide-payment-company-form {
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+  z-index: 10;
+}
+#pay-by-transfer-page .payment-company-section .buyer-title, #pay-by-transfer-page .payment-company-section .payment-title {
+  font-size: 22px;
+}
+#pay-by-transfer-page .payment-company-section .order-company-form .form-group label {
+  margin-bottom: 0;
+  font-weight: bold;
+}
+#pay-by-transfer-page .payment-company-section .order-company-form .form-group input, #pay-by-transfer-page .payment-company-section .order-company-form .form-group textarea {
+  border-radius: 0;
+  border-width: 2px;
+  border-color: #939598;
+}
+#pay-by-transfer-page .payment-company-section .order-company-form .form-group input:focus, #pay-by-transfer-page .payment-company-section .order-company-form .form-group textarea:focus {
+  box-shadow: none;
+  border-color: #66cc33;
+}
+#pay-by-transfer-page .send-to-mail-btn {
+  color: #ffffff;
+  background-color: #66cc33;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #66cc33;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+#pay-by-transfer-page .send-to-mail-btn:hover {
+  color: #66cc33;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+#pay-by-transfer-page .print-btn {
+  color: #66cc33;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #66cc33;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+#pay-by-transfer-page .print-btn:hover {
+  color: #ffffff;
+  background-color: #66cc33;
+  text-decoration: none;
+}
+#pay-by-transfer-page .footer-text a {
+  color: #000000;
+  text-decoration: underline;
+}
+#pay-by-transfer-page .footer-text a:hover {
+  text-decoration: none;
+}
+
+#user-account-page h1 {
+  font-size: 56px;
+  font-weight: bold;
+  color: #66cc33;
+  text-transform: uppercase;
+}
+@media (max-width: 575.98px) {
+  #user-account-page h1 {
+    font-size: 40px;
+  }
+}
+#user-account-page h2 {
+  color: #333463;
+}
+#user-account-page h2 i {
+  font-size: 20px;
+}
+#user-account-page .login-data-form label {
+  margin-bottom: 0;
+}
+#user-account-page .login-data-form input {
+  border-radius: 0;
+  border-color: #000000;
+}
+#user-account-page .login-data-form input:focus {
+  box-shadow: none;
+}
+#user-account-page .login-data-form .mobile-input {
+  color: #ccc;
+}
+#user-account-page .login-data-form .mobile-input input {
+  border-color: #ccc;
+}
+#user-account-page .login-data-form .mobile-input input::-webkit-input-placeholder {
+  /* Chrome/Opera/Safari */
+  color: #ccc;
+}
+#user-account-page .login-data-form .mobile-input input::-moz-placeholder {
+  /* Firefox 19+ */
+  color: #ccc;
+}
+#user-account-page .login-data-form .mobile-input input:-ms-input-placeholder {
+  /* IE 10+ */
+  color: #ccc;
+}
+#user-account-page .login-data-form .mobile-input input:-moz-placeholder {
+  /* Firefox 18- */
+  color: #ccc;
+}
+#user-account-page .login-data-form .login-data-form-btns .change-btn {
+  color: #66cc33;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #66cc33;
+  text-transform: uppercase;
+  text-align: center;
+}
+#user-account-page .login-data-form .login-data-form-btns .change-btn:hover {
+  color: #ffffff;
+  background-color: #66cc33;
+  text-decoration: none;
+}
+#user-account-page .login-data-form .login-data-form-btns .save-btn {
+  color: #ffffff;
+  background-color: #66cc33;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #66cc33;
+  text-transform: uppercase;
+  text-align: center;
+}
+#user-account-page .login-data-form .login-data-form-btns .save-btn:hover {
+  color: #66cc33;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+#user-account-page .user-password-section {
+  background-color: #f2f3f4;
+}
+#user-account-page .user-password-section .password-data-form input {
+  background-color: #f2f3f4;
+}
+#user-account-page .confirm-cancel-subscribe {
+  display: none;
+}
+#user-account-page .activated-services .confirm-cancel-subscribe-wrapper,
+#user-account-page .confirm-cancel-subscribe .confirm-cancel-subscribe-wrapper {
+  position: relative;
+  border: 1px solid #cccccc;
+}
+#user-account-page .activated-services .confirm-cancel-subscribe-wrapper .close-confirm-subscribe-window,
+#user-account-page .confirm-cancel-subscribe .confirm-cancel-subscribe-wrapper .close-confirm-subscribe-window {
+  position: absolute;
+  cursor: pointer;
+  top: 15px;
+  right: 15px;
+  font-size: 20px;
+}
+#user-account-page .activated-services .subscribe-options,
+#user-account-page .confirm-cancel-subscribe .subscribe-options {
+  border: 1px solid #000000;
+  color: #ccc;
+}
+#user-account-page .activated-services .subscribe-options p,
+#user-account-page .confirm-cancel-subscribe .subscribe-options p {
+  margin-bottom: 0;
+  display: inline-flex;
+}
+#user-account-page .activated-services .subscribe-btns .cancel-btn,
+#user-account-page .confirm-cancel-subscribe .subscribe-btns .cancel-btn {
+  display: block;
+  color: #66cc33;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #66cc33;
+  text-transform: uppercase;
+  text-align: center;
+}
+#user-account-page .activated-services .subscribe-btns .cancel-btn:hover,
+#user-account-page .confirm-cancel-subscribe .subscribe-btns .cancel-btn:hover {
+  color: #ffffff;
+  background-color: #66cc33;
+  text-decoration: none;
+}
+#user-account-page .activated-services .subscribe-btns .change-btn,
+#user-account-page .confirm-cancel-subscribe .subscribe-btns .change-btn {
+  display: block;
+  color: #66cc33;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #66cc33;
+  text-transform: uppercase;
+  text-align: center;
+}
+#user-account-page .activated-services .subscribe-btns .change-btn:hover,
+#user-account-page .confirm-cancel-subscribe .subscribe-btns .change-btn:hover {
+  color: #ffffff;
+  background-color: #66cc33;
+  text-decoration: none;
+}
+#user-account-page .activated-services .subscribe-btns .order-btn,
+#user-account-page .confirm-cancel-subscribe .subscribe-btns .order-btn {
+  display: block;
+  color: #66cc33;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #66cc33;
+  text-transform: uppercase;
+  text-align: center;
+}
+#user-account-page .activated-services .subscribe-btns .order-btn:hover,
+#user-account-page .confirm-cancel-subscribe .subscribe-btns .order-btn:hover {
+  color: #ffffff;
+  background-color: #66cc33;
+  text-decoration: none;
+}
+#user-account-page .invite-friend-section {
+  background-color: #f2f3f4;
+}
+#user-account-page .invite-friend-section .cancel-btn {
+  display: block;
+  color: #ffffff;
+  background-color: #66cc33;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #66cc33;
+  text-transform: uppercase;
+  text-align: center;
+}
+#user-account-page .invite-friend-section .cancel-btn:hover {
+  color: #66cc33;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+#user-account-page .invite-friend-section .generate-code-input {
+  border: 1px solid #000000;
+}
+#user-account-page .invite-friend-section .generate-code-input:focus {
+  outline: none;
+  box-shadow: none;
+}
+#user-account-page .save-settings-section .cancel-btn {
+  display: block;
+  color: #66cc33;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #ffffff;
+  text-transform: uppercase;
+  text-align: center;
+}
+#user-account-page .save-settings-section .cancel-btn:hover {
+  color: #ffffff;
+  background-color: #66cc33;
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: TitilliumWeb;
+  font-weight: 300;
+  src: url("/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/fonts/TitilliumWeb-Light.ttf") format("opentype");
+}
+@font-face {
+  font-family: TitilliumWeb;
+  font-weight: 400;
+  src: url("/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/fonts/TitilliumWeb-Regular.ttf") format("opentype");
+}
+@font-face {
+  font-family: TitilliumWeb;
+  font-weight: 600;
+  src: url("/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/fonts/TitilliumWeb-SemiBold.ttf") format("opentype");
+}
+@font-face {
+  font-family: TitilliumWeb;
+  font-weight: 700;
+  src: url("/web/20220302095713im_/https://www.hlavnespravy.sk/wp-content/themes/hsp2/fonts/TitilliumWeb-Bold.ttf") format("opentype");
+}
+body {
+  width: 100%;
+  height: 100%;
+  font-family: TitilliumWeb, serif;
+  color: #000000;
+}
+
+hr {
+  margin-bottom: 50px;
+  border-width: 2px;
+  border-color: #66cc33;
+}
+hr.invoice-hr {
+  border-color: #939598;
+  margin-bottom: 1rem;
+}
+
+h2.custom-blue {
+  font-size: 20px;
+  color: #333463;
+  font-weight: bold;
+}
+
+.hs-image {
+  /*img {
+      max-width: 75px;
+      height: auto;
+  }*/
+}
+.hs-image.hidden {
+  visibility: hidden;
+}
+
+.main-logo img {
+  max-width: 500px;
+  width: 100%;
+}
+
+.font-bold {
+  font-weight: bold !important;
+}
+
+.text-uppercase {
+  text-transform: uppercase !important;
+}
+
+.color-black {
+  color: #000000 !important;
+}
+
+.color-gray {
+  color: #cccccc;
+}
+
+.container.custom-container {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+@media (min-width: 1200px) {
+  .container.custom-container {
+    max-width: 1200px;
+  }
+}
+.container.custom-container > .row {
+  margin-right: -10px !important;
+  margin-left: -10px !important;
+}
+
+.primary-btn {
+  color: #ffffff;
+  background-color: #66cc33;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+  border: 2px solid transparent;
+  display: inline-block;
+}
+.primary-btn:hover {
+  color: #66cc33;
+  background-color: #ffffff;
+  text-decoration: none;
+  border-color: #66cc33;
+}
+
+.secondary-btn {
+  color: #66cc33;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+  border: 2px solid #66cc33;
+  display: inline-block;
+}
+.secondary-btn:hover {
+  color: #ffffff;
+  background-color: #66cc33;
+  text-decoration: none;
+  border-color: #ffffff;
+}
+
+.primary-btn-blue {
+  color: #ffffff;
+  background-color: #333463;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 2px;
+  border: 2px solid transparent;
+  display: block;
+}
+.primary-btn-blue:hover {
+  color: #333463;
+  background-color: #ffffff;
+  text-decoration: none;
+  border-color: #333463;
+}
+
+.login-register-popup {
+  display: none;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  z-index: 999;
+  background: #ffffff;
+  margin-left: auto;
+  -webkit-box-shadow: 0px 0px 20px 0px gray;
+  -moz-box-shadow: 0px 0px 20px 0px gray;
+  box-shadow: 0px 0px 20px 0px gray;
+  max-width: 600px;
+}
+@media (max-width: 991.98px) {
+  .login-register-popup {
+    left: 0;
+    margin: auto;
+  }
+}
+.login-register-popup .register-step-2,
+.login-register-popup .login-step-forgot-password {
+  display: none;
+}
+.login-register-popup .close-login-register-popup {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.login-register-popup h2 {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 26px;
+}
+.login-register-popup p {
+  font-size: 14px;
+}
+.login-register-popup .register-form form .form-group {
+  /*&:first-child {
+      label i {
+          color: $primary-blue;
+      }
+      input {
+          border: 2px solid $primary-blue;
+      }
+  }*/
+}
+.login-register-popup .register-form form .form-group label i {
+  font-size: 18px;
+  color: #66cc33;
+}
+.login-register-popup .register-form form .form-group input {
+  border: 2px solid #66cc33;
+  border-radius: 0;
+  position: relative;
+}
+.login-register-popup .register-form form .form-group input:focus {
+  outline: none;
+  box-shadow: none;
+  border-color: #333463;
+}
+.login-register-popup .register-form form .more-register-options {
+  font-weight: bold;
+  font-size: 14px;
+}
+.login-register-popup .register-form form .more-register-options a {
+  text-decoration: none;
+}
+.login-register-popup .register-form form .more-register-options a i {
+  font-size: 20px;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+  text-align: center;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+.login-register-popup .register-form form .more-register-options a i:hover {
+  background-color: #ffffff !important;
+}
+.login-register-popup .register-form form .more-register-options a i:hover.fa-facebook-f {
+  color: #3b5999;
+}
+.login-register-popup .register-form form .more-register-options a i:hover.fa-vk {
+  color: #4c75a3;
+}
+.login-register-popup .register-form form .more-register-options a i.fa-facebook-f {
+  background-color: #3b5999;
+}
+.login-register-popup .register-form form .more-register-options a i.fa-vk {
+  background-color: #4c75a3;
+}
+.login-register-popup .register-form form .gdpr-check {
+  font-size: 14px;
+}
+.login-register-popup .register-form form .gdpr-check a {
+  color: #000000;
+  text-decoration: underline;
+}
+.login-register-popup .register-form form .register-btn,
+.login-register-popup .register-form form .login-btn {
+  color: #ffffff;
+  background-color: #66cc33;
+  transition: all 0.2s ease-in-out;
+  border: 2px solid #66cc33;
+  display: block;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+}
+.login-register-popup .register-form form .register-btn:hover,
+.login-register-popup .register-form form .login-btn:hover {
+  color: #66cc33;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+.login-register-popup .register-form form .forgot-password-btn {
+  font-size: 14px;
+  color: #000000;
+  text-decoration: underline;
+}
+.login-register-popup .register-form form .forgot-password-btn:hover {
+  text-decoration: none;
+}
+.login-register-popup .register-form form .forgot-password-text {
+  font-weight: bold;
+  font-size: 14px;
+}
+.login-register-popup .register-form form p a {
+  color: #000000;
+  text-decoration: underline;
+}
+.login-register-popup .register-form form p a:hover {
+  text-decoration: none;
+}
+
+.main-content .main-content-info p {
+  margin-bottom: 5px;
+  font-size: 16px;
+}
+.main-content .subtitle {
+  font-size: 22px;
+  color: #333463;
+  font-weight: bold;
+}
+@media (max-width: 575.98px) {
+  .main-content .subtitle {
+    line-height: 1;
+  }
+}
+.main-content h1 {
+  font-size: 50px;
+  font-weight: 600;
+  color: #66cc33;
+  text-transform: uppercase;
+}
+@media (max-width: 575.98px) {
+  .main-content h1 {
+    line-height: 1;
+  }
+}
+.main-content p {
+  font-size: 14px;
+}
+.main-content .thanks-title {
+  font-size: 22px;
+  color: #66cc33;
+  font-weight: 600;
+}
+
+.subscribe-section {
+  background-color: #f2f3f4;
+  /*.choose-support-amount-section {
+      max-width: 700px;
+      margin: 0 auto;
+  }*/
+}
+.subscribe-section h2 {
+  font-size: 22px;
+  color: #333463;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.subscribe-section .support-us-form {
+  padding-left: 30px;
+}
+@media (max-width: 575.98px) {
+  .subscribe-section .support-us-form {
+    padding-left: 0;
+  }
+}
+.subscribe-section .support-us-form .form-group {
+  font-weight: 600;
+  font-size: 16px;
+}
+.subscribe-section .support-us-form .form-group #inputSupportAmount {
+  font-weight: 600;
+  padding-right: 2rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-radius: 0;
+  height: 100%;
+  width: 180px;
+  border: none;
+}
+@media (max-width: 575.98px) {
+  .subscribe-section .support-us-form .form-group #inputSupportAmount {
+    width: 150px;
+  }
+}
+.subscribe-section .support-us-form .form-group #inputSupportAmount:focus {
+  box-shadow: none;
+  border-color: #ced4da;
+}
+.subscribe-section .support-us-form .form-group .fa-euro-sign {
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 14px;
+  color: #ccc;
+}
+@media (max-width: 575.98px) {
+  .subscribe-section .support-us-form .form-group .fa-euro-sign {
+    right: 10px;
+  }
+}
+.subscribe-section .support-us-form .support-us-form-btn {
+  font-size: 18px;
+  padding: 0 2rem 0 2rem;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0;
+  border: 2px solid #66cc33;
+  display: block;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.subscribe-section .support-us-form .support-us-form-btn:focus {
+  box-shadow: none;
+}
+.subscribe-section .support-us-form .support-us-form-btn:disabled {
+  cursor: not-allowed;
+}
+
+.choose-payment-section h2 {
+  font-size: 22px;
+  color: #333463;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.choose-payment-section img {
+  max-width: 100px;
+  max-height: 30px;
+}
+
+footer {
+  background-color: #333463;
+  color: #ffffff;
+  padding-top: 15px;
+}
+@media (max-width: 575.98px) {
+  footer .footer-nav {
+    display: flex !important;
+    justify-content: center;
+  }
+}
+footer .footer-nav .nav-item:first-child {
+  margin-left: 0;
+}
+footer .footer-nav .nav-item .nav-link {
+  color: #ffffff;
+  font-size: 14px;
+  padding: 0;
+}
+footer .footer-nav .nav-item .nav-link:after {
+  content: "|";
+  position: relative;
+  font-size: 14px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+@media (max-width: 575.98px) {
+  footer .footer-nav .nav-item .nav-link {
+    font-size: 13px;
+    padding: 0.1rem !important;
+  }
+  footer .footer-nav .nav-item .nav-link:after {
+    font-size: 13px;
+    margin-left: 3px;
+    margin-right: 0;
+  }
+}
+footer .footer-nav .nav-item:last-child .nav-link:after {
+  content: none;
+}
+footer .support-us-btn {
+  background-color: #66cc33;
+  display: inline-block;
+  padding: 2px 5px;
+  color: #ffffff;
+  font-size: 14px;
+  width: 100px;
+  height: 20px;
+  text-align: center;
+  line-height: 1;
+}
+footer .footer-info p {
+  font-size: 14px;
+  line-height: 19px;
+}
+
+.support-us-box {
+  max-width: 800px;
+  border: 1px solid #ccc;
+}
+.support-us-box h2 {
+  font-size: 24px;
+}
+@media (max-width: 575.98px) {
+  .support-us-box h2 {
+    text-align: center;
+  }
+}
+
+.search-form .search-input {
+  display: none;
+  padding: 0 10px;
+}
+
+.main-nav-search.hide-search-input {
+  display: none;
+}
+
+.subscribe-section-summary {
+  display: none;
+}
+.subscribe-section-summary .close-section {
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  color: #000000;
+  z-index: 100;
+}
+@media (max-width: 575.98px) {
+  .subscribe-section-summary hr {
+    margin-bottom: 16px;
+  }
+}
+.subscribe-section-summary .subscribe-section-summary-title p {
+  text-transform: uppercase;
+}
+.subscribe-section-summary .subscribe-section-summary-title h2 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #66cc33;
+  text-transform: uppercase;
+}
+@media (max-width: 575.98px) {
+  .subscribe-section-summary .summary-item-strong {
+    font-weight: bold;
+  }
+}
+.subscribe-section-summary .print-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+.subscribe-section-summary .print-btn {
+  text-transform: uppercase;
+  font-size: 18px;
+  padding: 0 2rem 0 2rem;
+  transition: all 0.2s ease-in-out;
+  letter-spacing: 0;
+  border: 2px solid #66cc33;
+  display: inline-block;
+  border-radius: 0;
+  width: 180px;
+  font-weight: bold;
+}
+.subscribe-section-summary .print-btn:focus {
+  box-shadow: none;
+}
+.subscribe-section-summary .send-to-mail-form .send-to-mail-input {
+  width: 275px;
+  border-radius: 0;
+  padding-top: 0;
+  padding-bottom: 0;
+  border: 2px solid #66cc33;
+}
+.subscribe-section-summary .send-to-mail-form .send-to-mail-input:focus {
+  box-shadow: none;
+}
+.subscribe-section-summary .send-to-mail-form .send-to-mail-btn {
+  font-weight: bold;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-size: 18px;
+  padding-top: 0;
+  padding-bottom: 0;
+  letter-spacing: 0;
+}
+.subscribe-section-summary .send-to-mail-form .send-to-mail-btn:disabled {
+  cursor: not-allowed;
+}
+.subscribe-section-summary .send-to-mail-form .gdpr-checkbox-label {
+  font-weight: 600;
+}
+.subscribe-section-summary .bank-logos a img {
+  max-width: 100px;
+  max-height: 50px;
+}
+
+.bank-logos-section h2 {
+  font-size: 16px;
+  font-weight: 400;
+}
+
+/*# sourceMappingURL=style.css.map */
+
+/*
+     FILE ARCHIVED ON 09:57:13 Mar 02, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:18:34 Apr 25, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 165.595
+  exclusion.robots: 0.095
+  exclusion.robots.policy: 0.087
+  RedisCDXSource: 5.545
+  esindex: 0.01
+  LoadShardBlock: 135.509 (3)
+  PetaboxLoader3.datanode: 170.23 (5)
+  CDXLines.iter: 17.64 (3)
+  load_resource: 264.368 (2)
+  PetaboxLoader3.resolve: 81.264 (2)
+*/
