@@ -51,6 +51,7 @@ Vagrant.configure("2") do |config|
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 1024
       vb.cpus = 1
+      vb.gui = false
     end
     device.vm.synced_folder ".",
       "/vagrant",
@@ -79,6 +80,7 @@ Vagrant.configure("2") do |config|
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 2048
       vb.cpus = 1
+      vb.gui = false
     end
     device.vm.synced_folder ".",
       "/vagrant",
@@ -107,6 +109,7 @@ Vagrant.configure("2") do |config|
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 1024
       vb.cpus = 1
+      vb.gui = false
     end
     device.vm.synced_folder ".",
       "/vagrant",
@@ -135,6 +138,7 @@ Vagrant.configure("2") do |config|
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 1024
       vb.cpus = 1
+      vb.gui = false
     end
     device.vm.synced_folder ".",
       "/vagrant",
