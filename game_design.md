@@ -24,7 +24,7 @@ When you came to the offices, the building was locked and the only possible entr
 **Hints** (*visible to the player if requested*):
 
 Example: Hint 1 (What tool to use?): Use the command-line  **ssh**. Type `ssh --help` for more info.
-Example: Hint 2 (What login to use?): Use the first and last name of the secretary and change it to lowercase and join them using `.`
+Example: Hint 2 (What login to use?): Use the first and last name of the secretary and change it to lowercase and use them as login and password
 
 **Solution** (*visible to the player if requested*):
 
@@ -32,7 +32,7 @@ Example: Hint 2 (What login to use?): Use the first and last name of the secreta
 
 What should the player discover after successfully solving the level:
 
-`secretary_username` and `secretary_password`
+`secretary_username` : `secretary_password`
 
 ---
 ---
