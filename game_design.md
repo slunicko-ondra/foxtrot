@@ -19,20 +19,20 @@ As you probably know, most of the attacks start with gathering some information 
 
 When this is not possible, social media or blogging websites are also options where you can find hobbies or other compromising info on the victim. But I have a feeling you do not need this type of information.
 
-When you came to the offices, the building was locked and the only possible entrance you found was the window right next to the cheif editors secretary table. You cannot physically access her computer but it looks like it is turned on. Once you gather some information, you can start with getting the remote access to the computer of the secretary. Maybe access through the terminal will be sufficient, but you will definitely need login and password. 
+When you came to the offices, the building was locked and the only possible entrance you found was the window right next to the cheif editors secretary table. You cannot physically access her computer but it looks like it is turned on. Once you gather some information, you can start with getting the remote access to the computer of the secretary. Maybe access through the terminal will be sufficient, but you will definitely need login and password. After successful connection use aquired password as the flag.
  
 **Hints**:
 
-Example: Hint 1 (What tool to use?): Use the command-line  **ssh**. Type `ssh --help` for more info.
-Example: Hint 2 (What login to use?): Use the first and last name of the secretary and change it to lowercase and use them as login and password
+Hint 1 (What tool to use?): Use the command-line  **ssh**. Type `ssh --help` for more info.
+
+Hint 2 (What login to use?): Use the first and last name of the secretary (in lowercase) as login and password
 
 **Solution**:
-
-(name):(password)
+ssh valeria:user -p #type "ivanovna" as password
 
 **Flag value**:
 
-valeria:ivanovna
+ivanovna
 
 ---
 ---
@@ -47,49 +47,45 @@ That reconnaissance is important part of hacking and you don't always have to us
 
 ## Level 2: Find that file
 
-**Objective** (*visible only to the designer, never to the player*):
+**Objective**:
 
-Find the secret file in the file system. It's text file in Trash folder.
+Find the secret file in the file system. It's a text file in Trash folder.
 
 ---
 ---
 
-**Task assignment** (*visible to the player*):
+**Task assignment**:
 
-Valeria received an email with instructions in the attachment. When you received secret instructions, you should probably delete them, right? However, is deleted file lost forever?
+Valeria received an email with secret information in the attachment. When you receive secret instructions, after reading you should probably delete them, right? However, is deleted file lost forever? Find the (not yet published) secret file and use it's name as a flag.
 
-**Hints** (*visible to the player if requested*):
+**Hints**:
 
 Hint 1 (Where to look): Deleted files are moved to Trash folder. It's located at /home/Valeria/.local/share/Trash.
 
-Hint 2 (Which file?): Filename is instructions.txt (#TODO)
+Hint 2 (Which file?): Filename is instructions.txt
 
-**Solution** (*visible to the player if requested*):
+**Solution**:
 
-***#TODO***
 ```
 cd /home/Valeria/.local/share/Trash
 ls
 cat instructions.txt
 ```
 
-**Flag value** (*visible to the player if they solve the level*):
+**Flag value**:
 
-What should the player discover after successfully solving the level:
-
-`filemane of secret file stored on server` (#TODO)
+`filemane of secret file stored on server` #TODO
 
 ---
 ---
 
-**Estimated duration** (*visible only to the designer, never to the player*):
+**Estimated duration**:
 
-(#TODO)
-[Number] minutes (for the average player to complete the level)
+5 minutes
 
-**Learning outcomes** (*visible only to the designer, never to the player*):
+**Learning outcomes**:
 
-Searching for files via linux terminal. Find out the path of Trash folder.
+Searching for files via linux terminal. Discovering specific folders like the Trash.
 
 ## Level 3: Scan the network
 
