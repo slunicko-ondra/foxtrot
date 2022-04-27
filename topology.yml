@@ -1,5 +1,5 @@
 # A topology definition for PV276 project sandboxes
-name: foxtrot
+name: pv276-2022-foxtrot
 
 hosts:
   - name: attacker
