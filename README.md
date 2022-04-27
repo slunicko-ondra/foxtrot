@@ -14,15 +14,15 @@ This sandbox consists of five networked hosts in a LAN:
 
 This sandbox was tested with these system configurations:
 
-* Operating system: Windows 10 Home \<**TODO** to be added by each team member>
-* RAM needed: 9 GB? <**TODO** to be added by the whole team; 5 GB by default>
-* Free disk space needed: 80 GB? <**TODO** to be added by the whole team; 20 GB by default>
+* Operating system: Windows 10 Home
+* RAM needed: 9 GB? < 5 GB by default >
+* Free disk space needed: 80 GB? < 20 GB by default >
 
 This sandbox was tested with these software versions:
 
-* VirtualBox: 6.1.32 r149290 (Qt5.6.2) \<**TODO** to be added by each team member>
-* Vagrant: 2.2.19 \<**TODO** to be added by each team member>
-* Ansible: 2.10.8 \<**TODO** to be added by each team member>
+* VirtualBox: 6.1.32 r149290 (Qt5.6.2) 
+* Vagrant: 2.2.19 
+* Ansible: 2.10.8 
 
 ## Usage
 
