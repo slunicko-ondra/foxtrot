@@ -1,5 +1,83 @@
 ---
-# This is a role for the host server.
-# You can write your tasks here.
+# APACHE
+- name: install wget, curl, make, gcc and perl
+  apt:
+    pkg:
+      - wget
+      - curl
+      - make
+      - gcc
+      - perl
+    state: present
+    update_cache: true
+
+- name: install libraries
+  apt:
+    pkg:
+      - libapr1-dev
+      - libaprutil1-dev
+      - libpcre3-dev
+    state: present
+    update_cache: true
+
+- name: copy Apache archive
+  copy:
+    src: httpd-2.4.50.tar.gz
+    dest: /tmp/
+
+- name: unzip tar file
+  shell: cd /tmp/ && tar -xf httpd-2.4.50.tar.gz
+
+- name: install Apache
+  shell: cd /tmp/ && ./httpd-2.4.50/configure --prefix=/ && make && make install
+
+- name: copy config file
+  copy:
+    src: httpd.conf
+    dest: /conf/
+
+# Index.html data
+- name: Copy index.html data directory to the server
+  copy:
+    src: index_data
+    dest: /htdocs/
+
+# Hladne Spravy index.html page
+- name: Copy index.html
+  copy:
+    src: index.html
+    dest: /htdocs/
+
+- name: copy start script
+  copy:
+    src: start.sh
+    dest: /start_apache/
+    mode: 777
+
+- name: copy start_apache script
+  copy:
+    src: start_apache.sh
+    dest: /start_apache/
+    mode: 777
+
+- name: start Apache
+  shell: apachectl -k start
+  become: true
+
+- name: run start script
+  shell: cd /start_apache/ && ./start.sh
+  become: true
+
+- name: set Apache to run automatically after reboot
+  cron:
+    name: "run Apache"
+    special_time: reboot
+    job: "/start_apache/start.sh && /start_apache/start_apache.sh"
+
+# copy articles
+- name: copy articles folder and files
+  copy:
+    src: articles
+    dest: /
 
 ...

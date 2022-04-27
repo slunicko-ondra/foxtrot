@@ -1,0 +1,33 @@
+.lazy-hidden,.entry img.lazy-hidden, img.thumbnail.lazy-hidden {
+	background-color: #ffffff;
+	background-image: url('/web/20220302095714im_/https://www.hlavnespravy.sk/wp-content/plugins/a3-lazy-load/assets/css/loading.gif');
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+}
+figure.wp-block-image img.lazy-hidden {
+	min-width: 150px;
+}
+picture source[type="image/webp"] {
+	display: block;
+}
+/*
+     FILE ARCHIVED ON 09:57:14 Mar 02, 2022 AND RETRIEVED FROM THE
+     INTERNET ARCHIVE ON 17:18:35 Apr 25, 2022.
+     JAVASCRIPT APPENDED BY WAYBACK MACHINE, COPYRIGHT INTERNET ARCHIVE.
+
+     ALL OTHER CONTENT MAY ALSO BE PROTECTED BY COPYRIGHT (17 U.S.C.
+     SECTION 108(a)(3)).
+*/
+/*
+playback timings (ms):
+  captures_list: 156.201
+  exclusion.robots: 0.087
+  exclusion.robots.policy: 0.075
+  RedisCDXSource: 0.615
+  esindex: 0.007
+  LoadShardBlock: 136.775 (3)
+  PetaboxLoader3.datanode: 139.426 (4)
+  CDXLines.iter: 15.892 (3)
+  load_resource: 68.571
+  PetaboxLoader3.resolve: 42.103
+*/

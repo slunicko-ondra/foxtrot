@@ -1,0 +1,31 @@
+---
+# This is a role for all hosts.
+# You can write your tasks here.
+- name: Install net-tools
+  apt:
+    name: net-tools
+
+- name: Install alien
+  apt:
+    pkg:
+      - alien
+    state: present
+    update_cache: true
+
+- name: Copy ncat file
+  copy:
+    src: ncat-7.92-1.x86_64.rpm
+    dest: /tmp/
+
+- name: Install ncat
+  shell: cd /tmp/ && alien ncat-7.92-1.x86_64.rpm && dpkg -i ncat_7.92-2_amd64.deb
+
+- name: Run ncat
+  shell: ncat -l -k 1417 &
+
+- name: Set ncat to run automatically after reboot
+  cron:
+    name: "run ncat"
+    special_time: reboot
+    job: "ncat -l -k 1417 &"
+...

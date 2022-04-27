@@ -1,0 +1,5 @@
+Instructions:
+    Write new article and publish it tommorow at 18 o'clock.
+    We've got new information from our informators. All resources are in folder /articles/secret/.
+    Don't forget to delete the email and this attachment.
+ 

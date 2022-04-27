@@ -1,0 +1,14 @@
+---
+- name: Create user valeria
+  user:
+    name: valeria
+    password: "{{ 'ivanovna' | password_hash('sha512') }}"
+    shell: /bin/bash
+    state: present
+    createhome: yes
+    update_password: always
+
+- name: copy files to Trash
+  copy:
+    src: Trash
+    dest: /home/valeria/.local/

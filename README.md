@@ -1,29 +1,28 @@
-# <TODO_name_of_your_game>
-
-<**TODO** Students, replace all text in angle brackets in this file with your custom description.>
+# StopThePropaganda
 
 ## Sandbox topology
 
-This sandbox consists of two networked hosts in a LAN:
+This sandbox consists of five networked hosts in a LAN:
 
-* attacker - Kali Linux 2020 with GUI at IP `10.10.10.10`,
-* server - headless Ubuntu 18.04 Server running Telnet at IP `10.10.10.20`.
-
-<**TODO** Modify this section if you change the sandbox topology, or else remove this note.>
+* attacker - Kali Linux 2020 with GUI at IP `192.168.1.30`,
+* server - headless Ubuntu 18.04 Server running Telnet at IP `192.168.1.4`.
+* server2 - headless Ubuntu 18.04 Server running Telnet at IP `192.168.1.6`.
+* server3 - headless Ubuntu 18.04 Server running Telnet at IP `192.168.1.3`.
+* user - headless Ubuntu 18.04 Server running Telnet at IP `192.168.1.19`.
 
 ## System requirements
 
 This sandbox was tested with these system configurations:
 
-* Operating system: \<**TODO** to be added by each team member>
-* RAM needed: <**TODO** to be added by the whole team; 5 GB by default>
-* Free disk space needed: <**TODO** to be added by the whole team; 20 GB by default>
+* Operating system: Windows 10 Home
+* RAM needed: 9 GB? < 5 GB by default >
+* Free disk space needed: 80 GB? < 20 GB by default >
 
 This sandbox was tested with these software versions:
 
-* VirtualBox: \<**TODO** to be added by each team member>
-* Vagrant: \<**TODO** to be added by each team member>
-* Ansible: \<**TODO** to be added by each team member>
+* VirtualBox: 6.1.32 r149290 (Qt5.6.2) 
+* Vagrant: 2.2.19 
+* Ansible: 2.10.8 
 
 ## Usage
 
@@ -38,6 +37,6 @@ This sandbox was tested with these software versions:
 Faculty of Informatics\
 Masaryk University
 
-**Leading authors:** <**TODO** Add your names here. See also the `provisioning/LICENSE` file>
+**Leading authors:** Filip Hujer, Ondřej Ježek, David Rusnák, Jakub Kiska
 
 **Contributors/Consultants:** Jan Vykopal, Valdemar Švábenský

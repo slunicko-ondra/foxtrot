@@ -5,11 +5,11 @@
 # vi: set ft=ruby :
 
 ansible_groups = {
-  "hosts" => ["attacker", "server"], 
-  "routers" => [], 
-  "ssh" => ["attacker", "server"], 
+  "hosts" => ["attacker", "server", "user", "server2", "server3"], 
+  "routers" => ["router"], 
+  "ssh" => ["router", "attacker", "server", "user", "server2", "server3"], 
   "winrm" => [], 
-  "ansible" => ["attacker", "server"], 
+  "ansible" => ["router", "attacker", "server", "user", "server2", "server3"], 
   "user-accessible" => ["attacker"]
 }
 
@@ -30,7 +30,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.10",
+      ip: "192.168.1.30",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"
@@ -51,6 +51,7 @@ Vagrant.configure("2") do |config|
     device.vm.provider "virtualbox" do |vb|
       vb.memory = 1024
       vb.cpus = 1
+      vb.gui = false
     end
     device.vm.synced_folder ".",
       "/vagrant",
@@ -58,7 +59,7 @@ Vagrant.configure("2") do |config|
       rsync__exclude: ".git/"
     device.vm.network "private_network",
       virtualbox__intnet: "network",
-      ip: "10.10.10.20",
+      ip: "192.168.1.4",
       netmask: "255.255.255.0"
     device.vm.provision "ansible_local" do |ansible|
       ansible.playbook = "preconfig/playbook.yml"
@@ -69,6 +70,93 @@ Vagrant.configure("2") do |config|
       ansible.playbook = "provisioning/playbook.yml"
       ansible.groups = ansible_groups
       ansible.limit = "server"
+    end
+  end
+
+  # Device(host): user
+  config.vm.define "user" do |device|
+    device.vm.hostname = "user"
+    device.vm.box = "munikypo/ubuntu-18.04"
+    device.vm.provider "virtualbox" do |vb|
+      vb.memory = 2048
+      vb.cpus = 1
+      vb.gui = false
+    end
+    device.vm.synced_folder ".",
+      "/vagrant",
+      type: "rsync",
+      rsync__exclude: ".git/"
+    device.vm.network "private_network",
+      virtualbox__intnet: "network",
+      ip: "192.168.1.19",
+      netmask: "255.255.255.0"
+    device.vm.provision "ansible_local" do |ansible|
+      ansible.playbook = "preconfig/playbook.yml"
+      ansible.groups = ansible_groups
+      ansible.limit = "user"
+    end
+    device.vm.provision "ansible_local" do |ansible|
+      ansible.playbook = "provisioning/playbook.yml"
+      ansible.groups = ansible_groups
+      ansible.limit = "user"
+    end
+  end
+
+  # Device(host): server2
+  config.vm.define "server2" do |device|
+    device.vm.hostname = "server2"
+    device.vm.box = "munikypo/ubuntu-18.04"
+    device.vm.provider "virtualbox" do |vb|
+      vb.memory = 1024
+      vb.cpus = 1
+      vb.gui = false
+    end
+    device.vm.synced_folder ".",
+      "/vagrant",
+      type: "rsync",
+      rsync__exclude: ".git/"
+    device.vm.network "private_network",
+      virtualbox__intnet: "network",
+      ip: "192.168.1.6",
+      netmask: "255.255.255.0"
+    device.vm.provision "ansible_local" do |ansible|
+      ansible.playbook = "preconfig/playbook.yml"
+      ansible.groups = ansible_groups
+      ansible.limit = "server2"
+    end
+    device.vm.provision "ansible_local" do |ansible|
+      ansible.playbook = "provisioning/playbook.yml"
+      ansible.groups = ansible_groups
+      ansible.limit = "server2"
+    end
+  end
+
+  # Device(host): server3
+  config.vm.define "server3" do |device|
+    device.vm.hostname = "server3"
+    device.vm.box = "munikypo/ubuntu-18.04"
+    device.vm.provider "virtualbox" do |vb|
+      vb.memory = 1024
+      vb.cpus = 1
+      vb.gui = false
+    end
+    device.vm.synced_folder ".",
+      "/vagrant",
+      type: "rsync",
+      rsync__exclude: ".git/"
+    device.vm.network "private_network",
+      virtualbox__intnet: "network",
+      ip: "192.168.1.3",
+      netmask: "255.255.255.0"
+    device.vm.provision "ansible_local" do |ansible|
+      ansible.playbook = "preconfig/playbook.yml"
+      ansible.groups = ansible_groups
+      ansible.limit = "server3"
+    end
+    device.vm.provision "ansible_local" do |ansible|
+      ansible.playbook = "provisioning/playbook.yml"
+      ansible.groups = ansible_groups
+      ansible.limit = "server3"
     end
   end
 end
