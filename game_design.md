@@ -60,11 +60,11 @@ Find the secret file in the file system. It's a text file in Trash folder.
 
 **Task assignment**:
 
-Valeria received an email with secret information in the attachment. When you receive secret instructions, after reading you should probably delete them, right? However, is deleted file lost forever? Find the location of the (not yet published) secret file and use the location itself as a flag.
+Valeria received an email with secret information in the attachment. When you receive secret instructions, after reading you should probably delete them, right? However, is deleted file lost forever? Try to find it. The flag is the location of the secret folder inside the deleted attachment (don't forget the '/').
 
 **Hints**:
 
-Hint 1 (Where to look): Deleted files are moved to Trash folder. It's located at /home/valeria/.local/share/Trash.
+Hint 1 (Where to look): Deleted files are moved to Trash folder. Users typically have a hidden .local/ folder in their home directory, and inside it, you can find the Trash folder somewhere.
 
 Hint 2 (Which file?): Filename is attachment1.txt
 
