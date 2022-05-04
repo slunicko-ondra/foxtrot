@@ -61,6 +61,7 @@ Find the secret file in the file system. It's a text file in Trash folder.
 **Task assignment**:
 
 Valeria received an email with secret information in the attachment. When you receive secret instructions, after reading you should probably delete them, right? However, is deleted file lost forever? Try to find it. The flag is the location of the secret folder inside the deleted attachment (don't forget the '/').
+Note this location, it may be useful in the future.
 
 **Hints**:
 
@@ -163,15 +164,14 @@ Use the exploit to get access to the servers filesystem and find the secret file
 
 **Task assignment**:
 
-You already got the IP address and the name of the service. Fortunately for you, the Apache servers tend to be vulnerable. After all, this is not your first time dealing with such a server. This means that you got a script ready to be used. It is located in your Downloads folder. Unfortunately, it was quite a long time ago, so you need to refresh your memory a bit. The important thing is that you do remember the name of the vulnerability. The name is [CVE-2021-42013]. Thanks to this, you will be able to find the file the name which you discovered from the deleted file on Valeria's computer. The flag itself is the last word in the file (consisting of two parts connected with -).
+You already got the IP address and the name of the service. Fortunately for you, the Apache servers tend to be vulnerable. After all, this is not your first time dealing with such a server. This means that you got a script ready to be used. It is located in your Downloads folder. Unfortunately, it was quite a long time ago, so you need to refresh your memory a bit. The important thing is that you do remember the name of the vulnerability. On the internet, you can find the vulnerability under the name [CVE-2021-42013]. Thanks to this, you will be able to find the secret file (name of which you discovered from the deleted file on Valeria's computer). The flag itself is the last word in the file (consisting of two parts connected with -).
 
 **Hints**:
 
-Hint 1 (Where to find more info?): https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-42013
+Hint 1 (Where is the Downloads folder?): /home/kali/Downloads
 
-Hint 2 (Where is the Downloads folder?): /home/kali/Downloads
+Hint 2 (How to traverse the filesystem?): Use basic commands as "cd" and "ls". You can run the script multiple times to find the right information.
 
-Hint 3 (How to use multiple commands in one call?): Make use of quotes. For example "cd /articles/ && ls"
 
 **Solution**:
 
