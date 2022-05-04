@@ -1,8 +1,8 @@
 ---
 - name: Create user valeria
   user:
-    name: valeria
-    password: "{{ 'ivanovna' | password_hash('sha512') }}"
+    name: valeria.ivanovna
+    password: "{{ 'tomasko1232002' | password_hash('sha512') }}"
     shell: /bin/bash
     state: present
     createhome: yes
