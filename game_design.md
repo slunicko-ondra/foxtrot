@@ -19,24 +19,25 @@ As you probably know, most of the attacks start with gathering some information 
 
 When this is not possible, social media or blogging websites are also options where you can find hobbies or other compromising info on the victim. But I have a feeling you do not need this type of information.
 
-When you came to the offices, the building was locked and the only possible entrance you found was the window right next to the cheif editors secretary table. You cannot physically access her computer but it looks like it is turned on. Once you gather some information, you can start with getting the remote access to the computer of the secretary. Maybe access through the terminal will be sufficient, but you will definitely need login and password. After successful connection use aquired password as the flag.
+When you came to the offices, the building was locked and the only possible entrance you found was the window right next to the chief editors' secretary table. You cannot physically access her computer, but it looks like it is turned on. Once you gather some information, you can start with getting the remote access to the computer of the secretary. Maybe access through the terminal will be sufficient, but you will definitely need login (username) and password. And from the previous reconnaissance, I think her computers IP address ends with'.1.19'. After successful connection use acquired login as the flag.
  
 **Hints**:
 
 Hint 1 (What tool to use?): Use the command-line  **ssh**. Type `ssh --help` for more info.
 
-Hint 2 (What login to use?): Use the first and last name of the secretary (in lowercase) as login and password
+Hint 2 (What login to use?): Use the first and last name of the secretary (in lowercase) as login
 
 **Solution**:
 
 ```
-ssh valeria@user
-valeria@user's password: ivanovna
+ssh valeria.ivanovna@192.168.1.19
+
+valeria.ivanovna@192.168.1.19 password: tomasko1232002
 ```
 
 **Flag value**:
 
-`ivanovna`
+`valeria.ivanovna`
 
 ---
 ---
@@ -47,7 +48,7 @@ valeria@user's password: ivanovna
 
 **Learning outcomes**:
 
-That reconnaissance is important part of hacking and you don't always have to use computer to discover useful information. And also basic knowledge about ssh command.
+That reconnaissance is important part of hacking, and you don't always have to use computer to discover useful information. And also basic knowledge about ssh command.
 
 ## Level 2: Find that file
 
