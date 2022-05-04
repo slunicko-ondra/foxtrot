@@ -102,7 +102,7 @@ The task is to find the machine with a running web server. Use nmap and find a r
 
 **Task assignment**:
 
-You already got into the computer of Ms. Valeria and found some useful information about files stored on some server. 
+You already got into the computer of Ms. Valeria and found some useful information about files stored on some server (it's good idea to note or remember them). So now you can get back to your machine nad continue with this task.
 
 Your task is to find the machine with a running web server. Use some scanning tool and look for specific services running on specific ports.
 
