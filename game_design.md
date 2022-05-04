@@ -164,13 +164,13 @@ Use the exploit to get access to the servers filesystem and find the secret file
 
 **Task assignment**:
 
-You already got the IP address and the name of the service. Fortunately for you, the Apache servers tend to be vulnerable. After all, this is not your first time dealing with such a server. This means that you got a script ready to be used. It is located in your Downloads folder. Unfortunately, it was quite a long time ago, so you need to refresh your memory a bit. The important thing is that you do remember the name of the vulnerability. On the internet, you can find the vulnerability under the name [CVE-2021-42013]. Thanks to this, you will be able to find the secret file (name of which you discovered from the deleted file on Valeria's computer). The flag itself is the last word in the file (consisting of two parts connected with -).
+You already got the IP address and the name of the service. Fortunately for you, the Apache servers tend to be vulnerable. After all, this is not your first time dealing with such a server. This means that you got a script ready to be used. It is located in your Downloads folder. Unfortunately, it was quite a long time ago, so you need to refresh your memory a bit. The important thing is that you do remember the name of the vulnerability. On the internet, you can find the vulnerability under the name [CVE-2021-42013]. Using the script (which implements the vulnerability), try to gain access to the files on the remote server. You should find the secret file (name of which you discovered from the deleted file on Valeria's computer). The flag itself is the last word in the file (consisting of two parts connected with -).
 
 **Hints**:
 
 Hint 1 (Where is the Downloads folder?): /home/kali/Downloads
 
-Hint 2 (How to traverse the filesystem?): Use basic commands as "cd" and "ls". You can run the script multiple times to find the right information.
+Hint 2 (How to find the right information?): To read a file, use basic commands like "cd", "ls" and "cat". You can run the script multiple times to find the right information.
 
 
 **Solution**:
