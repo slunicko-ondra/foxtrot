@@ -13,24 +13,28 @@ hosts:
       image: ubuntu-18.04
       mgmt_user: ubuntu
     flavor: csirtmu.tiny1x2
+    hidden: True
 
   - name: user
     base_box:
       image: ubuntu-18.04
       mgmt_user: ubuntu
     flavor: csirtmu.tiny1x2
+    hidden: True
 
   - name: server2
     base_box:
       image: ubuntu-18.04
       mgmt_user: ubuntu
     flavor: csirtmu.tiny1x2
+    hidden: True
 
   - name: server3
     base_box:
       image: ubuntu-18.04
       mgmt_user: ubuntu
     flavor: csirtmu.tiny1x2
+    hidden: True
 
 routers:
   - name: router
