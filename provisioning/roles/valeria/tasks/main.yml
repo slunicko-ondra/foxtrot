@@ -11,4 +11,38 @@
 - name: copy files to Trash
   copy:
     src: Trash
-    dest: /home/valeria/.local/
+    dest: /home/valeria.ivanovna/.local/
+
+- name: Creates Downloads
+  file:
+    path: /home/valeria.ivanovna/Downloads
+    state: directory
+
+- name: Creates Desktop
+  file:
+    path: /home/valeria.ivanovna/Desktop
+    state: directory
+
+- name: Creates Music
+  file:
+    path: /home/valeria.ivanovna/Music
+    state: directory
+
+- name: Creates Pictures
+  file:
+    path: /home/valeria.ivanovna/Pictures
+    state: directory
+
+- name: Creates Videos
+  file:
+    path: /home/valeria.ivanovna/Videos
+    state: directory
+
+- name: copy files to Documents
+  copy:
+    src: Documents
+    dest: /home/valeria.ivanovna/
+
+- name: Install sl
+  apt:
+    name: sl
