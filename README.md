@@ -14,22 +14,23 @@ This sandbox consists of five networked hosts in a LAN:
 
 This sandbox was tested with these system configurations:
 
-* Operating system: Windows 10 Home
-* RAM needed: 9 GB? < 5 GB by default >
-* Free disk space needed: 80 GB? < 20 GB by default >
+* Operating system: Windows 10 Home, Ubuntu 20.04.4 LTS
+* RAM needed: 9 GB
+* Free disk space needed: 28 GB
 
 This sandbox was tested with these software versions:
 
-* VirtualBox: 6.1.32 r149290 (Qt5.6.2) 
+* VirtualBox: 6.1.32 r149290 (Qt5.6.2)
 * Vagrant: 2.2.19 
-* Ansible: 2.10.8 
+* Ansible: 2.9.6, 2.10.8 
 
 ## Usage
 
-1. Clone this repository locally.
+1. Clone this repository locally. Install Vagrant, VirtualBox and Anisble.
 2. Run `vagrant up` in the directory with this repository to instantiate the sandbox.
-3. Access Kali via VirtualBox console. Log in as `kali` with `kali` as password.
-4. Enjoy.
+3. Access an attacker machine (Kali) via VirtualBox console. Log in as `kali` with `kali` as password.
+4. In game_desing.md you'll find tasks, hits and solution. In props directory you'll find physical props used at hacking day in form of pictures.
+5. Enjoy.
 
 ## Credits
 
