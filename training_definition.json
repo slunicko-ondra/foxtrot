@@ -1,0 +1,165 @@
+{
+  "title" : "[Foxtrot] Stop the Propaganda",
+  "description" : "In this game you try exploit cve-2021-42013 (path traversal).",
+  "prerequisites" : [ ],
+  "outcomes" : [ "learn about cve-2021-42013", "work with nmap", "exploiting remote code execution and path traversal" ],
+  "state" : "UNRELEASED",
+  "show_stepper_bar" : true,
+  "levels" : [ {
+    "title" : "Stop the Propaganda",
+    "level_type" : "INFO_LEVEL",
+    "order" : 0,
+    "estimated_duration" : 0,
+    "minimal_possible_solve_time" : null,
+    "content" : "You are a member of a technically proficient group of people fighting the disinformation scene. You gathered information from your secret source about the disinformation web magazine ‘Hladné Správy.’ From the information, you found out that this magazine has obtained documents containing a load of false information and one unnamed country's government provided these documents. On top of that, this country reportedly paid the magazine to release the information all over the internet as true articles, and that is why we need to stop them and hand the documents to the authorities.\nWe found out the exact location of the magazine's offices, and your task is to go there and get access to those incriminating documents in their network. Go there when the offices are empty and try not to get exposed. The best way would be to get to the chief editor's computer, but he takes it home with him. However, his secretary probably doesn't. Start there, and good luck."
+  }, {
+    "title" : "Login to your computer",
+    "level_type" : "ACCESS_LEVEL",
+    "order" : 1,
+    "estimated_duration" : 0,
+    "minimal_possible_solve_time" : null,
+    "passkey" : "kali",
+    "cloud_content" : "Your computer is called the attacker. You can see it in topology. Just click it with the right button and select the 'Open GUI' option. You can log in with the username **kali** and the password **kali**. Passkey for this level is also **kali**. :D From your attacker PC you can use web browser and checkout hladnespravy.sk. On that page is only a load of bull***t, so don't waste your precious time there.",
+    "local_content" : "Local (non-cloud) content of access level should be here."
+  }, {
+    "title" : "Get acces",
+    "level_type" : "TRAINING_LEVEL",
+    "order" : 2,
+    "estimated_duration" : 7,
+    "minimal_possible_solve_time" : null,
+    "answer" : "valeria.ivanovna",
+    "answer_variable_name" : null,
+    "content" : "As you probably know, most of the attacks start with gathering some information about the victim and does not have to happen online. If you have access to the victim’s trash cans or their table where they sit, there may be some valuable pieces of information. When this is not possible, social media or blogging websites are also options where you can find hobbies or other compromising info on the victim. But I have a feeling you do not need this type of information.\n\nWhen you came to the offices, the building was locked and the only possible entrance you found was the window right next to the chief editors' secretary table. You cannot physically access her computer, but it looks like it is turned on. Once you gather some information, you can start with getting the remote access to the computer of the secretary. Maybe access through the terminal will be sufficient, but you will definitely need login (username) and password. And from the previous reconnaissance, I think her computers IP address ends with'.168.1.19'. After successful connection use acquired login as the flag.\n",
+    "solution" : "`ssh valeria.ivanovna@192.168.1.19`\n\n`valeria.ivanovna@192.168.1.19` password: tomasko1232002",
+    "solution_penalized" : true,
+    "hints" : [ {
+      "title" : "What login to use?",
+      "content" : "Use the first and last name of the secretary (in lowercase and with a dot as a separator) as login.",
+      "hint_penalty" : 0,
+      "order" : 1
+    }, {
+      "title" : "What tool to use?",
+      "content" : "Use the command-line ssh. Type ssh --help for more info.",
+      "hint_penalty" : 0,
+      "order" : 0
+    }, {
+      "title" : "Where to find the password?",
+      "content" : "Look through the window in the office.",
+      "hint_penalty" : 0,
+      "order" : 2
+    } ],
+    "incorrect_answer_limit" : 100,
+    "attachments" : [ ],
+    "max_score" : 100,
+    "variant_answers" : false,
+    "reference_solution" : [ ],
+    "mitre_techniques" : [ ],
+    "expected_commands" : [ ]
+  }, {
+    "title" : "Find that file",
+    "level_type" : "TRAINING_LEVEL",
+    "order" : 3,
+    "estimated_duration" : 5,
+    "minimal_possible_solve_time" : null,
+    "answer" : "/articles/secret/",
+    "answer_variable_name" : null,
+    "content" : "Valeria received an email with secret information in the attachment. When you receive secret instructions, after reading you should probably delete them, right? However, is deleted file lost forever? Try to find it. The flag is the location of the secret folder inside the deleted attachment (don't forget the '/').",
+    "solution" : "cd /home/valeria/.local/share/Trash/files/\nls\ncat attachment1.txt\n",
+    "solution_penalized" : true,
+    "hints" : [ {
+      "title" : "Where to look",
+      "content" : "Deleted files are moved to Trash folder. Users typically have a hidden .local/ folder in their home directory, and inside it, you can find the Trash folder somewhere.",
+      "hint_penalty" : 0,
+      "order" : 0
+    }, {
+      "title" : "Which file?",
+      "content" : "Filename is attachment1.txt",
+      "hint_penalty" : 0,
+      "order" : 1
+    } ],
+    "incorrect_answer_limit" : 100,
+    "attachments" : [ ],
+    "max_score" : 100,
+    "variant_answers" : false,
+    "reference_solution" : [ ],
+    "mitre_techniques" : [ ],
+    "expected_commands" : [ ]
+  }, {
+    "title" : "Scan the network",
+    "level_type" : "TRAINING_LEVEL",
+    "order" : 4,
+    "estimated_duration" : 10,
+    "minimal_possible_solve_time" : null,
+    "answer" : "2.4.50",
+    "answer_variable_name" : null,
+    "content" : "You already got into the computer of Ms. Valeria and found some useful information about files stored on some server (it's a good idea to note or remember them). So now you can get back to your machine and continue with this task.\n\nYour task is to find the machine with a running web server. Use some scanning tool and look for specific services running on specific ports.\n\nAs a flag, submit the version of service running on the web server.\n",
+    "solution" : "```\nkali@attacker:~#  ifconfig\n    eth0:...\n        ...\n    eth1:...\n        inet 192.168.1.30 netmask 255.255.255.0\n    ...\n\nkali@attacker:~#  nmap -sV 192.168.1.30/24\n    ...\n    Nmap scan report for user (192.168.1.30)\n    ...\n    80/tcp open http Apache httpd 2.4.50\n\n```\n",
+    "solution_penalized" : true,
+    "hints" : [ {
+      "title" : "What range to use?",
+      "content" : "**nmap**  needs to specify what host/network to scan. You can find information about you network with **ifconfig**. And have you heard about CIDR Notation? It can save you some time if you use subnet mask /24 as it does not scan all adreses.",
+      "hint_penalty" : 0,
+      "order" : 2
+    }, {
+      "title" : "What to look for?",
+      "content" : "Web servers usually run on port 80, try looking for that.",
+      "hint_penalty" : 0,
+      "order" : 0
+    }, {
+      "title" : "What else?",
+      "content" : "Try to find a right option to run nmap with, that enables detection of services versions.",
+      "hint_penalty" : 0,
+      "order" : 3
+    }, {
+      "title" : "What tool to use?",
+      "content" : "Use the command-line tool **nmap**. Check --help ",
+      "hint_penalty" : 0,
+      "order" : 1
+    } ],
+    "incorrect_answer_limit" : 100,
+    "attachments" : [ ],
+    "max_score" : 100,
+    "variant_answers" : false,
+    "reference_solution" : [ ],
+    "mitre_techniques" : [ ],
+    "expected_commands" : [ ]
+  }, {
+    "title" : "Exploit the server",
+    "level_type" : "TRAINING_LEVEL",
+    "order" : 5,
+    "estimated_duration" : 15,
+    "minimal_possible_solve_time" : null,
+    "answer" : "Gagarin-mk1",
+    "answer_variable_name" : null,
+    "content" : "You already got the IP address and the name of the service. Fortunately for you, the Apache servers tend to be vulnerable. After all, this is not your first time dealing with such a server. This means that you got a script ready to be used. It is located in your Downloads folder. Unfortunately, it was quite a long time ago, so you need to refresh your memory a bit. The important thing is that you do remember the name of the vulnerability. On the internet, you can find the vulnerability under the name [CVE-2021-42013]. Using the script (which implements the vulnerability), try to gain access to the files on the remote server. You should find the secret file (name of which you discovered from the deleted file on Valeria's computer). The flag itself is the last word in the file (consisting of two parts connected with -).\n",
+    "solution" : "```\npython3 cve-2021-42013.py -u http://192.168.1.4 -s \"cd /articles/secret && cat new_information\"\n```",
+    "solution_penalized" : true,
+    "hints" : [ {
+      "title" : "Where is the Downloads folder?",
+      "content" : "/home/kali/Downloads",
+      "hint_penalty" : 0,
+      "order" : 0
+    }, {
+      "title" : "How to find the right information?",
+      "content" : "To read a file, use basic commands like \"cd\", \"ls\" and \"cat\". You can run the script multiple times to find the right information.",
+      "hint_penalty" : 0,
+      "order" : 1
+    } ],
+    "incorrect_answer_limit" : 100,
+    "attachments" : [ ],
+    "max_score" : 100,
+    "variant_answers" : false,
+    "reference_solution" : [ ],
+    "mitre_techniques" : [ ],
+    "expected_commands" : [ ]
+  }, {
+    "title" : "The End",
+    "level_type" : "INFO_LEVEL",
+    "order" : 6,
+    "estimated_duration" : 0,
+    "minimal_possible_solve_time" : null,
+    "content" : "You found that file. Great! It's obviously a fake. Authorities can ban the website with this evidence, so this hoax will never be published. Thank you."
+  } ],
+  "estimated_duration" : 37,
+  "variant_sandboxes" : false
+}
