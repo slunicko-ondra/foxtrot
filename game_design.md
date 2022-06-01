@@ -1,7 +1,6 @@
 # StopThePropaganda
 
-You are a member of a technically proficient group of people fighting the disinformation scene. You gathered information from your secret source about disinformation web magazine ‘Hladné Správy’. From the information, you found out that this magazine has obtained documents containing a load of false information and one unnamed country's government provided these documents. On top of that, this country reportedly paid the magazine to release the information all over the internet as true articles and that is why we need to stop them and hand the documents to authorities. 
-We found out the exact location of the magazine's offices and your task is to go there and get access to those incriminating documents in their network. Go there when the offices are empty and try not to get exposed. The best way would be to get to the chief editor's computer, but he takes it home with him. However, his secretary probably doesn't. Start there and good luck. 
+You are a member of a technically proficient group of people fighting the disinformation scene. You gathered information from your secret source about the disinformation web magazine ‘Hladné Správy.’ From the information, you found out that this magazine has obtained documents containing a load of false information and one unnamed country's government provided these documents. On top of that, this country reportedly paid the magazine to release the information all over the internet as true articles, and that is why we need to stop them and hand the documents to the authorities. We found out the exact location of the magazine's offices, and your task is to go there and get access to those incriminating documents in their network. Go there when the offices are empty and try not to get exposed. The best way would be to get to the chief editor's computer, but he takes it home with him. However, his secretary probably doesn't. Start there, and good luck.
 
 
 ## Level 1: Get access 
@@ -15,17 +14,19 @@ The player should get access to secretary computer using SSH.
 
 **Task assignment**:
 
-As you probably know, most of the attacks start with gathering some information about the victim and does not have to happen online. If you have access to the victim’s trash cans or their table where they sit, there may be some valuable pieces of information. 
+As you probably know, most of the attacks start with gathering some information about the victim and does not have to happen online. If you have access to the victim’s trash cans or their table where they sit, there may be some valuable pieces of information.
 
 When this is not possible, social media or blogging websites are also options where you can find hobbies or other compromising info on the victim. But I have a feeling you do not need this type of information.
 
-When you came to the offices, the building was locked and the only possible entrance you found was the window right next to the chief editors' secretary table. You cannot physically access her computer, but it looks like it is turned on. Once you gather some information, you can start with getting the remote access to the computer of the secretary. Maybe access through the terminal will be sufficient, but you will definitely need login (username) and password. And from the previous reconnaissance, I think her computers IP address ends with'.1.19'. After successful connection use acquired login as the flag.
+When you came to the offices, the building was locked and the only possible entrance you found was the window right next to the chief editors' secretary table. You cannot physically access her computer, but it looks like it is turned on. Once you gather some information, you can start with getting the remote access to the computer of the secretary. Maybe access through the terminal will be sufficient, but you will definitely need login (username) and password. And from the previous reconnaissance, I think her computers IP address ends with'.168.1.19'. After successful connection use acquired login as the flag.
  
 **Hints**:
 
 Hint 1 (What tool to use?): Use the command-line  **ssh**. Type `ssh --help` for more info.
 
-Hint 2 (What login to use?): Use the first and last name of the secretary (in lowercase) as login
+Hint 2 (What login to use?): Use the first and last name of the secretary (in lowercase and with a dot as a separator) as login.
+
+Hint 3 (Where to find the password?): Look through the window in the office.
 
 **Solution**:
 
@@ -62,7 +63,6 @@ Find the secret file in the file system. It's a text file in Trash folder.
 **Task assignment**:
 
 Valeria received an email with secret information in the attachment. When you receive secret instructions, after reading you should probably delete them, right? However, is deleted file lost forever? Try to find it. The flag is the location of the secret folder inside the deleted attachment (don't forget the '/').
-Note this location, it may be useful in the future.
 
 **Hints**:
 
@@ -104,7 +104,7 @@ The task is to find the machine with a running web server. Use nmap and find a r
 
 **Task assignment**:
 
-You already got into the computer of Ms. Valeria and found some useful information about files stored on some server (it's good idea to note or remember them). So now you can get back to your machine nad continue with this task.
+You already got into the computer of Ms. Valeria and found some useful information about files stored on some server (it's a good idea to note or remember them. So now you can get back to your machine and continue with this task.
 
 Your task is to find the machine with a running web server. Use some scanning tool and look for specific services running on specific ports.
 
@@ -195,6 +195,12 @@ python3 cve-2021-42013.py -u http://192.168.1.4 -s "cd /articles/secret && cat n
 **Learning outcomes**:
 
 Learn about vulnerabilities (CVE) and that you can exploit them easily.
+
+---
+---
+
+## The End
+You found that file. Great! It's obviously a fake. Authorities can ban the website with this evidence, so this hoax will never be published. Thank you.
 
 ---
 ---
