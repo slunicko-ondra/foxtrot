@@ -206,5 +206,5 @@ You found that file. Great! It's obviously a fake. Authorities can ban the websi
 ---
 
 ## License
-This work by team Foxtrot is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0).
+This work by Filip Hujer, Ondřej Ježek, David Rusnák, Jakub Kiska is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0).
 
