@@ -32,6 +32,12 @@ This sandbox was tested with these software versions:
 4. In game_desing.md you'll find tasks, hits and solution. In props directory you'll find physical props used at hacking day in form of pictures.
 5. Enjoy.
 
+## Sources
+
+In this game, we use an edited version of the web page hlavnespravy.sk (this page was banned, but you can still find it on archive.org on this [link](https://web.archive.org/web/20220302070017/https://www.hlavnespravy.sk/)).
+
+For the content of some files, we use fragments of articles from themoscowtimes.com (articles can be found [here](https://www.themoscowtimes.com/2022/04/26/theyd-probably-all-die-analysts-doubt-russian-push-toward-separatist-transnistria-a77498) and [here](https://www.themoscowtimes.com/2022/04/26/chechen-commander-awarded-hero-of-russia-for-mariupol-siege-a77496)) and lyrics of Loituma's levan Polkka.
+
 ## Credits
 
 [Cybersecurity Laboratory](https://cybersec.fi.muni.cz)\
