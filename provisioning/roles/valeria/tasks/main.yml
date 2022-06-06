@@ -11,7 +11,7 @@
 - name: copy files to Trash
   copy:
     src: Trash
-    dest: /home/valeria.ivanovna/.local/
+    dest: /home/valeria.ivanovna/.local/share/
 
 - name: Creates Downloads
   file:

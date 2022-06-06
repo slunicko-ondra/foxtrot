@@ -64,7 +64,7 @@
     "answer" : "/articles/secret/",
     "answer_variable_name" : null,
     "content" : "Valeria received an email with secret information in the attachment. When you receive secret instructions, after reading you should probably delete them, right? However, is deleted file lost forever? Try to find it. The flag is the location of the secret folder inside the deleted attachment (don't forget the '/').",
-    "solution" : "cd /home/valeria.ivanovna/.local/Trash/files/\nls\ncat attachment1.txt\n",
+    "solution" : "cd /home/valeria.ivanovna/.local/share/Trash/files/\nls\ncat attachment1.txt\n",
     "solution_penalized" : true,
     "hints" : [ {
       "title" : "Where to look",

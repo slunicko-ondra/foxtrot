@@ -73,7 +73,7 @@ Hint 2 (Which file?): Filename is attachment1.txt
 **Solution**:
 
 ```
-cd /home/valeria/.local/share/Trash/files/
+cd /home/valeria.ivanovna/.local/share/Trash/files/
 ls
 cat attachment1.txt
 ```
