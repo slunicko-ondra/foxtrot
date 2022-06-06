@@ -1,1 +1,0 @@
-apachectl -k start
