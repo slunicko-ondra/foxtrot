@@ -1,4 +1,5 @@
 # StopThePropaganda
+The cybersecurity sandbox game created by team Foxtrot in the course *Seminar on Simulation of Cyber Attacks*.
 
 ## Sandbox topology
 
