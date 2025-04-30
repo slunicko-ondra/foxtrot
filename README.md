@@ -1,5 +1,5 @@
 # StopThePropaganda
-The cybersecurity sandbox game created by team Foxtrot in the course *Seminar on Simulation of Cyber Attacks*.
+The cybersecurity sandbox game created by team Foxtrot in the course *Seminar on Simulation of Cyber Attacks* (see [Credits](#credits)).
 
 ## Sandbox topology
 
@@ -30,7 +30,7 @@ This sandbox was tested with these software versions:
 1. Clone this repository locally. Install Vagrant, VirtualBox and Anisble.
 2. Run `vagrant up` in the directory with this repository to instantiate the sandbox.
 3. Access an attacker machine (Kali) via VirtualBox console. Log in as `kali` with `kali` as password.
-4. In game_desing.md you'll find tasks, hits and solution. In props directory you'll find physical props used at hacking day in form of pictures.
+4. In [game_desing.md](./game_design.md), you'll find tasks, hints, and solutions. In the props directory, you'll find physical props used at hacking day in the form of pictures.
 5. Enjoy.
 
 ## Sources
